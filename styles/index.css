@@ -1,0 +1,19 @@
+/* index.html의 <main>부분만 디자인하는 css */
+main {}
+
+/* 메인배너 스와이퍼 디자인 */
+/* * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;} */
+main .main {width:100%; height:500px;}
+main .main .swiper-wrapper {}
+main .main .swiper-wrapper .swiper-slide {
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+main .main .swiper-wrapper .slide1 {background-image:url(../images/mainBnr_01.png)}
+main .main .swiper-wrapper .slide2 {background:yellow;}
+main .main .swiper-wrapper .slide3 {background:green;}
+main .main .swiper-wrapper .slide4 {background:blue;}
+main .main .swiper-pagination {}
+main .main .swiper-pagination .swiper-pagination-bullets {background:yellow;}
+/* swiper-pagination-bullets */

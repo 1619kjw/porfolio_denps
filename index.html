@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>덴프스</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/common.css"><!-- 내용작성필요 -->
+    <link rel="stylesheet" href="./styles/index.css"><!-- 내용작성필요 -->
+    <script src="./scripts/index.js" defer></script>
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style> /* 테스트용 내부스타일 */ </style>
+</head>
+<body>
+    <header>
+        <div class="top_wrap">
+            <a href="#" id="line_banner">
+                <img src="./images/coupon.png" alt="쿠폰아이콘">
+                <p>카카오톡 플러스 친구 추가 시 <em>3,000원</em> 쿠폰 증정</p>
+                <span><img src="./images/close.png" alt="닫기버튼"></span>
+            </a>
+            <h1><a href="./index.html"><img src="./images/logo.png" alt="덴프스로고"></a></h1>
+            <div id="search_bar">
+                <input type="search" id="search" placeholder="덴프스와 함께 만드는 healthy life">
+                <a href="#"><img src="./images/search_searchbar.png" alt="검색버튼"></a>
+            </div>
+            <div id="user_menu">
+                <div id="user_top">
+                    <a href="#" id="login">로그인</a>
+                    <img src="./images/line_user_info.png">
+                    <a href="#" id="join">회원가입</a>
+                    <img src="./images/line_user_info.png">
+                    <a href="#" id="cs_center">고객센터</a>
+                </div>
+                <div id="user_bottom">
+                    <a href="#"><img src="./images/search_header.png" alt="검색버튼"></a>
+                    <a href="#"><img src="./images/like_header.png" alt="좋아요버튼"></a>
+                    <a href="#"><img src="./images/cart_header.png" alt="장바구니담기버튼"></a>
+                </div>
+            </div>
+            <nav>
+                <ul class="gnb_left">
+                    <li><a href="#"><img src="./images/ham_menu.png" alt=""></a></li>
+                    <li><a href="#">전제품</a></li>
+                    <li><a href="#">유산균</a></li>
+                    <li><a href="#">비타민</a></li>
+                    <li><a href="#">키즈</a></li>
+                    <li><a href="#">이너뷰티</a></li>
+                    <li><a href="#">오메가</a></li>
+                </ul>
+                <ul class="gnb_right">
+                    <li><a href="#"><img src="./images/gift.png" alt="">선물하기</a></li>
+                    <li><a href="#"><img src="./images/event.png" alt="">이벤트</a></li>
+                    <li><a href="#"><img src="./images/benefit.png" alt="">멤버십혜택</a></li>
+                    <li><a href="#">ABOUT DENPS</a></li>
+                </ul>
+                <div class="lnb_bg">
+                    <ul class="lnb_depth1_first">
+                        <li><a href="#">유산균 | 장 건강</a></li>
+                        <li><a href="#">비타민 | 미네랄</a></li>
+                        <li><a href="#">오메가3 | 혈관 건강</a></li>
+                        <li><a href="#">어린인 | 키즈</a></li>
+                        <li><a href="#">이너뷰티 | 밸런스</a></li>
+                        <li><a href="#">프로틴 | 다이어트</a></li>
+                    </ul>
+                    <ul class="lnb_depth1_second">
+                        <li><a href="#">뼈 | 관절 건강</a></li>
+                        <li><a href="#">남성 | 여성 건강</a></li>
+                        <li><a href="#">눈 | 두뇌 건강</a></li>
+                        <li><a href="#">위 | 간 건강</a></li>
+                        <li><a href="#">면역 | 수면 건강</a></li>
+                    </ul>
+                    <ul class="lnb_depth_third">
+                        <li><a href="#">멤버십 혜택</a></li>
+                    </ul>
+                    <ul class="lnb_depth_forth">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">상품문의</a></li>
+                        <li><a href="#">1:1문의</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="swiper main"><!------------------------1행 : 메인배너 스와이퍼 시작 -->
+            <!--필수-->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1">slide1</div>
+                <div class="swiper-slide slide2">slide2</div>
+                <div class="swiper-slide slide3">slide3</div>
+            </div>
+            <!--필요 시 사용(선택) : 페이지번호, 이전다음버튼-->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <section id="row2_category"><!-- ------------------------------2행 : 카테고리별 슬라이드 시작 -->
+            <div class="title_moveBtn">
+                <h2>나에게 필요한 건강식품을 찾아보세요</h2>
+                <div class="prev_next">
+                    <button type="prev"><img src="./images/category/arrow_prev.png" alt=""></button>
+                    <button type="next"><img src="./images/category/arrow_next.png" alt=""></button>
+                </div>
+            </div>
+            <div class="list"></div><!-- 여기 스와이퍼인지 아니면 슬라이드인지 모르겠음... -->
+        </section>
+        <section id="row3_best">
+            <h2><em>꾸준히 사랑받고 있는</em><br>덴프스의 베스트셀러</h2>
+            <div class="tap_menu">
+                <a href="#" class="tap">유산균 | 장 건강</a>
+                <a href="#" class="tap">비타민 | 미네랄</a>
+                <a href="#" class="tap">오메가3 | 혈관 건강</a>
+                <a href="#" class="tap">어린이 | 키즈</a>
+                <a href="#" class="tap">이너뷰티 | 밸런스</a>
+                <a href="#" class="tap">프로틴 | 다이어트</a>
+                <a href="#" class="tap">뼈 | 관절 건강</a>
+                <a href="#" class="tap">남성 | 여성 건강</a>
+                <a href="#" class="tap">눈 | 두뇌 건강</a>
+                <a href="#" class="tap">위 | 간 건강</a>
+                <a href="#" class="tap">면역 | 수면 건강</a>
+            </div>
+            <!-- 스와이퍼 구조 넣기 -->
+            <button type="button" class="more">베스트셀러 더보기</button>
+        </section>
+        <section id="row4_new"></section>
+        <section id="row5_gift"></section>
+        <section id="row6_artice"></section>
+        <section id="row7_video"></section>
+        <section id="row8_review"></section>
+        <section id="row9_brand_meaning"></section>
+    </main>
+    <footer>
+        <div class="footer_top">
+            <div class="left">
+                <a href="#">회사소개</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">이용안내</a>
+                <a href="#">이용약관</a>
+                <a href="#">채용공고</a>
+            </div>
+            <div class="right">
+                <p>고객센터 1566-5203</p>
+                <span>평일 10-17시 (점심시간 12:30-13:30 제외) / 주말, 공휴일 휴무</span>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="company_info">
+                <p>H.PIO 주식회사 에이치피오</p>
+                <div class="company_info_top">
+                    <div class="row1">
+                        <span>사업장소재지 : 서울특별시 영등포구 양평로 115 (주)에이치피오</span>
+                        <span>대표이사 : 민택근</span>
+                        <span>사업자등록번호 : 105-87-70267</span>
+                        <a href="#">사업자정보확인</a>
+                    </div>
+                    <div class="row2">
+                        <span>대표전화 : 1566-5203</span>
+                        <span>FAX : 02-6391-2771</span>
+                        <span>개인정보담당자 : 변정화</span>
+                        <span>통신판매업신고 : 제 2015-서울영등포-0175</span>
+                    </div>
+                    <div class="row3">
+                        <span>호스팅서비스 제공자 카페24</span>
+                    </div>
+                    <div class="row4">
+                        <span>제휴문의 : partnership@denps.com</span>
+                    </div>
+                </div>
+                <div class="company_info_bottom">
+                    <span>고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 구매안전서비스를 이용하실 수 있습니다.</span>
+                    <a href="#">가입확인</a>
+                    <p>Copyright © Denps. All right reserved.</p>
+                </div>
+            </div>
+            <div class="notice_sns">
+                <div class="notice">
+                    <a href="#">공지사항 +</a>
+                    <a href="#">[공지] 덴프스몰 6월 증정 이벤트 안내</a>
+                    <a href="#">5월 1주차 연휴 배송 안내</a>
+                    <a href="#">[긴급공지] 고객센터 전화 상담 정상화 안내</a>
+                </div>
+                <div class="sns">
+                    <a href="#"><img src="./images/footer/denps.png" alt=""></a>
+                    <a href="#"><img src="./images/footer/sns_youtube.png" alt=""></a>
+                    <a href="#"><img src="./images/footer/sns_insta.png" alt=""></a>
+                    <a href="#"><img src="./images/footer/sns_facebook.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
