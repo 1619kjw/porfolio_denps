@@ -3,8 +3,8 @@
 const mainSlide = new Swiper('.main',{
     // autoplay:{delay:2500,},
     pagination:{
-        el:'.main + .swiper-pagination',
-        type:'bullets',
+        el:'.main ~ .swiper-pagination',
+        type:'fractions',
     },
     navigation:{
         nextEl:'.swiper-wrapper ~ .swiper-button-next',
