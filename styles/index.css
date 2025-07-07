@@ -17,3 +17,25 @@ main .main .swiper-wrapper .slide4 {background:blue;}
 main .main .swiper-pagination {}
 main .main .swiper-pagination .swiper-pagination-bullets {background:yellow;}
 /* swiper-pagination-bullets */
+
+/* 2행 스와이퍼 */
+.category {width:1420px; height:199px; /* 원하는 스와이퍼 전체 크기 */}
+.category .swiper-wrapper {}
+.category .swiper-wrapper .swiper-slide {/* 개별슬라이드 값 설정 */
+    width:160px; height:199px;
+}
+
+/* 5행 스크롤 스와이퍼 */
+.gift {width:593px; height: 549px;/* 원하는 스와이퍼 전체 크기 */}
+.gift .swiper-wrapper {}
+.gift .swiper-wrapper .swiper-slide {/* 개별슬라이드 값 설정 */
+    width:490px; height:160px;
+    padding-right: 20px;
+    border: 1px solid red;
+    margin-bottom: 34.5px;
+}
+
+/* 6행(아티클) 가로스크롤 스와이퍼 */
+.article {width:1066px; height:461px;}
+.article .swiper-wrapper {}
+.article .swiper-wrapper .swiper-slide {width:350px; height:418px;}
