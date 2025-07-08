@@ -4,7 +4,7 @@ const mainSlide = new Swiper('.main',{
     // autoplay:{delay:2500,},
     pagination:{
         el:'.main ~ .swiper-pagination',
-        type:'fractions',
+        type:'fraction',
     },
     navigation:{
         nextEl:'.swiper-wrapper ~ .swiper-button-next',
@@ -83,4 +83,15 @@ const articleSwiper = new Swiper('.article',{
         el : ".article .swiper-scrollbar",
         draggable: true,
     }
+})
+/* 7행(영상영역) 번호페이지네이션 스와이퍼 */
+const videoSwiper = new Swiper('.video',{
+    navigation: {
+        nextEl: "#row7_video .swiper-button-next",
+        prevEl: "#row7_video .swiper-button-prev",
+    },
+    pagination:{
+        el:'.video + .swiper-pagination',
+        type:'bullets',
+    },
 })

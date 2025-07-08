@@ -25,17 +25,27 @@ main .main .swiper-pagination .swiper-pagination-bullets {background:yellow;}
     width:160px; height:199px;
 }
 
-/* 5행 스크롤 스와이퍼 */
-.gift {width:593px; height: 549px;/* 원하는 스와이퍼 전체 크기 */}
+/* 5행(선물하기) 스크롤 스와이퍼 */
+.gift {width:720px; height: 550px;/* 원하는 스와이퍼 전체 크기 */}
 .gift .swiper-wrapper {}
 .gift .swiper-wrapper .swiper-slide {/* 개별슬라이드 값 설정 */
-    width:490px; height:160px;
+    width:616px; height:170px;
     padding-right: 20px;
     border: 1px solid red;
     margin-bottom: 34.5px;
 }
+#row5_gift .bottom {display:flex;}
 
 /* 6행(아티클) 가로스크롤 스와이퍼 */
 .article {width:1066px; height:461px;}
 .article .swiper-wrapper {}
 .article .swiper-wrapper .swiper-slide {width:350px; height:418px;}
+
+/* 7행(영상영역) 페이지번호,이전다음버튼 스와이퍼 */
+main #row7_video {}
+main #row7_video .video {width:1200px; height:600px;}
+main #row7_video .video .swiper-wrapper {}
+main #row7_video .video .swiper-wrapper .swiper-slide {}
+main #row7_video .video .swiper-wrapper .swiper-slide.slide1 {background:red;}
+main #row7_video .video .swiper-wrapper .swiper-slide.slide2 {background:green;}
+main #row7_video .video .swiper-wrapper .swiper-slide.slide3 {background:yellow;}
