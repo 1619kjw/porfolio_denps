@@ -1,5 +1,8 @@
 /* index.html의 <main>부분만 디자인하는 css */
-main {}
+main {
+    max-width:100%;
+    min-width:320px;
+}
 
 /* 메인배너 스와이퍼 디자인 */
 /* * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;} */
@@ -49,3 +52,12 @@ main #row7_video .video .swiper-wrapper .swiper-slide {}
 main #row7_video .video .swiper-wrapper .swiper-slide.slide1 {background:red;}
 main #row7_video .video .swiper-wrapper .swiper-slide.slide2 {background:green;}
 main #row7_video .video .swiper-wrapper .swiper-slide.slide3 {background:yellow;}
+
+/* 반응형규칙 */
+@media screen and (max-width:1023px){/* 태블릿 */
+    /* 기존css에서 달라지는 값만 작성 */
+    html {border:2px solid red;}
+}/* media 768~1023 end */
+@media screen and (max-width:767px){/* 모바일 */
+    html {border:2px solid blue;}
+}/* media 320~767 end */

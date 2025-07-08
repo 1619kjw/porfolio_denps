@@ -1,1 +1,86 @@
 /* 헤더, 푸터만 디자인하는 css */
+html, body {width:100%;}
+/* ----------------------------header 시작 */
+header {
+    width:100%; height:152px;
+    min-width:320px;
+    position:relative;
+    background:yellow;
+}
+header .top_wrap {}
+header .top_wrap #line_banner {
+    background:#F8DF7D;
+    width:100%; height:46px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+header .top_wrap #line_banner img:nth-child(1) {
+    /* 쿠폰 이미지 */
+    width:30px; height:20px; margin-right:1.5px;
+}
+header .top_wrap #line_banner p {font-size:0.875rem;}
+header .top_wrap #line_banner p em {color:#FF0000;}
+header .top_wrap #line_banner img:nth-child(2) {/* close버튼 */
+    width:24px; height:24px;
+    position:absolute; right:251px; top:50%;
+}
+header .top_wrap h1 {
+    /* position:absolute; left:50%; */
+}
+header .top_wrap h1 a {}
+header .top_wrap h1 a img {}
+header .top_wrap #search_bar {}
+header .top_wrap #search_bar #search {}
+header .top_wrap #search_bar a {}
+header .top_wrap #search_bar a img {}
+header .top_wrap #user_menu {}
+header .top_wrap #user_menu #user_top {}
+header .top_wrap #user_menu #user_top #login {}
+header .top_wrap #user_menu #user_top img {/* 구분선 */}
+header .top_wrap #user_menu #user_top #join {}
+header .top_wrap #user_menu #user_top #cs_center {}
+header .top_wrap #user_menu #user_bottom {}
+header .top_wrap #user_menu #user_bottom a {}
+header .top_wrap #user_menu #user_bottom a img {}
+header .top_wrap nav {}
+header .top_wrap nav .gnb_left {}
+header .top_wrap nav .gnb_left li {}
+header .top_wrap nav .gnb_left li a {}
+header .top_wrap nav .gnb_left li a img {}
+header .top_wrap nav .gnb_right {}
+header .top_wrap nav .gnb_right li {}
+header .top_wrap nav .gnb_right li a {}
+header .top_wrap nav .gnb_right li a img {}
+header .top_wrap .lnb_bg {}
+header .top_wrap .lnb_bg .lnb_1 {}
+header .top_wrap .lnb_bg .lnb_1 li {}
+header .top_wrap .lnb_bg .lnb_1 li a {}
+header .top_wrap .lnb_bg .lnb_2 {}
+header .top_wrap .lnb_bg .lnb_2 li {}
+header .top_wrap .lnb_bg .lnb_2 li a {}
+header .top_wrap .lnb_bg .lnb_3 {}
+header .top_wrap .lnb_bg .lnb_3 li {}
+header .top_wrap .lnb_bg .lnb_3 li a {}
+header .top_wrap .lnb_bg .lnb_3 li a img {}
+header .top_wrap .lnb_bg .lnb_3 li a p:nth-child(1) {}
+header .top_wrap .lnb_bg .lnb_3 li a p:nth-child(2) {}
+header .top_wrap .lnb_bg .lnb_4 {}
+header .top_wrap .lnb_bg .lnb_4 li {}
+header .top_wrap .lnb_bg .lnb_4 li a {}
+header .top_wrap .lnb_bg .lnb_4 li a img {}
+header .top_wrap .lnb_bg .lnb_4 li a p:nth-child(1) {}
+header .top_wrap .lnb_bg .lnb_4 li a p:nth-child(2) {}
+header .top_wrap .lnb_bg .lnb_5 {}
+header .top_wrap .lnb_bg .lnb_5 li {}
+header .top_wrap .lnb_bg .lnb_5 li a {}
+header .top_wrap .lnb_bg .lnb_5 li a img {}
+header .top_wrap .lnb_bg .lnb_5 li a p:nth-child(1) {}
+header .top_wrap .lnb_bg .lnb_5 li a p:nth-child(2) {}
+header .top_wrap .lnb_bg .lnb_6 {}
+header .top_wrap .lnb_bg .lnb_6 li {}
+header .top_wrap .lnb_bg .lnb_6 li a {}
+/* ----------------------------header 끝 */
+/* ----------------------------footer 시작 */
+/* ----------------------------footer 끝 */

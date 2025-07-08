@@ -7,8 +7,8 @@
     <title>덴프스</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"><!-- 영문글꼴연결 -->
-    <link rel="stylesheet" href="./styles/common.css"><!-- 내용작성필요 -->
-    <link rel="stylesheet" href="./styles/index.css"><!-- 내용작성필요 -->
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <script src="./scripts/index.js" defer></script>
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
@@ -24,7 +24,7 @@
             <a href="#" id="line_banner">
                 <img src="./images/coupon.png" alt="쿠폰아이콘">
                 <p>카카오톡 플러스 친구 추가 시 <em>3,000원</em> 쿠폰 증정</p>
-                <span><img src="./images/close.png" alt="닫기버튼"></span>
+                <img src="./images/close.png" alt="닫기버튼">
             </a>
             <h1><a href="./index.html"><img src="./images/logo.png" alt="덴프스로고"></a></h1>
             <div id="search_bar">
@@ -34,9 +34,9 @@
             <div id="user_menu">
                 <div id="user_top">
                     <a href="#" id="login">로그인</a>
-                    <img src="./images/line_user_info.png">
+                    <img src="./images/line_user_info.png" alt="">
                     <a href="#" id="join">회원가입</a>
-                    <img src="./images/line_user_info.png">
+                    <img src="./images/line_user_info.png" alt="">
                     <a href="#" id="cs_center">고객센터</a>
                 </div>
                 <div id="user_bottom">
@@ -81,11 +81,13 @@
                     <li><a href="#">면역 | 수면 건강</a></li>
                 </ul>
                 <ul class="lnb_3">
-                    <li><a href="#">
+                    <li>
+                        <a href="#">
                         <img src="" alt="">
                         <p>[특별 선물 포장 서비스]</p>
                         <p>자세히보기</p>
-                    </a></li>
+                        </a>
+                    </li>
                 </ul>
                 <ul class="lnb_4">
                     <li><a href="#">
@@ -127,8 +129,8 @@
             <div class="title_moveBtn">
                 <h2>나에게 필요한 건강식품을 찾아보세요</h2>
                 <div class="prev_next">
-                    <button type="prev"><img src="./images/category/arrow_prev.png" alt=""></button>
-                    <button type="next"><img src="./images/category/arrow_next.png" alt=""></button>
+                    <button type="button" class="prev"><img src="./images/category/arrow_prev.png" alt=""></button>
+                    <button type="button" class="next"><img src="./images/category/arrow_next.png" alt=""></button>
                 </div>
             </div>
             <!-- 스와이퍼 구조 시작 -->
@@ -636,16 +638,16 @@
             <div class="video">
                 <!-- 비디오 숫자와 비디오를 형제로 배치 -->
                 <ul class="video_num">
-                    <li class="num1"><img src="./images/video/1_active.png" alt=""></button>
-                    <li class="num2"><img src="./images/video/2.png"></button>
-                    <li class="num3"><img src="./images/video/3.png"></button>
-                    <li class="num4"><img src="./images/video/4.png"></button>
+                    <li class="num1"><img src="./images/video/1_active.png" alt=""></li>
+                    <li class="num2"><img src="./images/video/2.png" alt=""></li>
+                    <li class="num3"><img src="./images/video/3.png" alt=""></li>
+                    <li class="num4"><img src="./images/video/4.png" alt=""></li>
                 </ul>
                 <ul class="video_show">
-                    <li class="video1"><iframe width="1250" height="703" src="https://www.youtube.com/embed/iH_LnWUWnIU" title="[덴프스 X 공유] 덴마크 프리미엄 스탠다드, 덴프스 (30s)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
-                    <li class="video2"><iframe width="1250" height="703" src="https://www.youtube.com/embed/rEyKYxeTsUk" title="10th Anniversary Denps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
-                    <li class="video3"><iframe width="1250" height="703" src="https://www.youtube.com/embed/K2S9OBMSQnA" title="덴프스 X 공유 비타민편 #트루바이타민 ㅣ DENPS X GONGYOO TVCF 15’’ VITAMIN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
-                    <li class="video4"><iframe width="1250" height="703" src="https://www.youtube.com/embed/xTejCztqTUI" title="덴프스 X 공유 유산균편 #덴마크유산균이야기 ㅣ DENPS X GONGYOO TVCF 15’’ PROBIOTICS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
+                    <li class="video1"><iframe width="1250" height="703" src="https://www.youtube.com/embed/iH_LnWUWnIU" title="[덴프스 X 공유] 덴마크 프리미엄 스탠다드, 덴프스 (30s)" style="border: none;"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
+                    <li class="video2"><iframe width="1250" height="703" src="https://www.youtube.com/embed/rEyKYxeTsUk" title="10th Anniversary Denps" style="border: none;"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
+                    <li class="video3"><iframe width="1250" height="703" src="https://www.youtube.com/embed/K2S9OBMSQnA" title="덴프스 X 공유 비타민편 #트루바이타민 ㅣ DENPS X GONGYOO TVCF 15’’ VITAMIN" style="border: none;"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
+                    <li class="video4"><iframe width="1250" height="703" src="https://www.youtube.com/embed/xTejCztqTUI" title="덴프스 X 공유 유산균편 #덴마크유산균이야기 ㅣ DENPS X GONGYOO TVCF 15’’ PROBIOTICS" style="border: none;"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
                 </ul>
             </div>
         </section><!-- ----------------------------------7행 : 영상영역 끝-->
@@ -661,8 +663,8 @@
 
                 </div>
             </div>
-        </section><!-- ----------------------------------8행 : 리뷰영역 끝-->
-        <section id="row9_brand_meaning"><!-- ----------------------------------9행 : 브랜딩영역 시작-->
+        </section><!-- ----------------------------------8행 : 리뷰영역 끝 -->
+        <div id="row9_brand_meaning"><!-- ----------------------------------9행 : 브랜딩영역 시작 -->
             <img class="left" src="" alt="">
             <ul class="right">
                 <li>
@@ -678,7 +680,7 @@
                     <span>프리미엄 건강기능식품의 기준을 새롭게 다지고,<br>나아가 더 많은 이들이 건강한 삶을 실현할 수 있도록 돕는 일,<br>바로 덴프스가 존재하는 이유입니다.</span>
                 </li>
             </ul>
-        </section><!-- ----------------------------------9행 : 브랜딩영역 끝-->
+        </div><!-- ----------------------------------9행 : 브랜딩영역 끝 -->
     </main>
     <footer>
         <div class="footer_top">
