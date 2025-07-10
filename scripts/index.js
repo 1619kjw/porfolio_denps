@@ -1,6 +1,6 @@
 
 /* 1행 : 메인배너 스와이퍼 기능 */
-const mainSlide = new Swiper('.main',{
+const mainSwiper = new Swiper('.main',{
     // autoplay:{delay:2500,},
     pagination:{
         el:'.main ~ .swiper-pagination',
@@ -11,6 +11,7 @@ const mainSlide = new Swiper('.main',{
         prevEl:'.swiper-wrapper ~ .swiper-button-prev',
     },
 });
+
 /* 2행:카테고리 가로 스크롤 스와이퍼 */
 const categorySwiper = new Swiper('.category',{
     navigation:{

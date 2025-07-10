@@ -6,20 +6,47 @@ main {
 
 /* 메인배너 스와이퍼 디자인 */
 /* * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;} */
-main .main {width:100%; height:500px;}
+main .main {width:100%; height:714px; position:relative;}
 main .main .swiper-wrapper {}
 main .main .swiper-wrapper .swiper-slide {
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
 }
-main .main .swiper-wrapper .slide1 {background-image:url(../images/mainBnr_01.png)}
-main .main .swiper-wrapper .slide2 {background:yellow;}
+main .main .swiper-wrapper .slide1 {
+    background-image:url(../images/mainBnr_01.png);
+}
+/* main .main .swiper-wrapper .slide2 {background:yellow;} */
 main .main .swiper-wrapper .slide3 {background:green;}
 main .main .swiper-wrapper .slide4 {background:blue;}
-main .main .swiper-pagination {}
-main .main .swiper-pagination .swiper-pagination-bullets {background:yellow;}
-/* swiper-pagination-bullets */
+
+/* 스와이퍼 페이지네이션 디자인 */
+main .main .swiper-pagination {
+    background:blue; width:40px; height:40px;
+    z-index:999;
+    position:absolute;
+}
+main .main .swiper-pagination .swiper-pagination-bullets {background:yellow;} /* swiper-pagination-bullets */
+
+/* 스와이퍼 이전, 다음버튼 디자인 */
+.swiper-button-next:after, .swiper-button-prev:after {
+    display:none; /* 스와이퍼 이전,다음버튼 기본디자인 삭제 */
+}
+main .main .swiper-button-next, main .main .swiper-button-prev {
+    width:70px; height:70px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    position:absolute; 
+}
+main .main .swiper-button-prev {
+    background-image:url(../images/mainBnr_prev.png);
+    left:110px;
+}
+main .main .swiper-button-next {
+    background-image:url(../images/mainBnr_next.png);
+    right:110px;
+}
 
 /* 2행 스와이퍼 */
 .category {width:1420px; height:199px; /* 원하는 스와이퍼 전체 크기 */}
