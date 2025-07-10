@@ -66,50 +66,58 @@
             </nav>
             <!-- lnb위치(nav hover시 한꺼번에 나온다->nav묶음의 형제로 배치) -->
             <div class="lnb_bg">
-                <ul class="lnb_1">
-                    <li><a href="#">유산균 | 장 건강</a></li>
-                    <li><a href="#">비타민 | 미네랄</a></li>
-                    <li><a href="#">오메가3 | 혈관 건강</a></li>
-                    <li><a href="#">어린이 | 키즈</a></li>
-                    <li><a href="#">이너뷰티 | 밸런스</a></li>
-                    <li><a href="#">프로틴 | 다이어트</a></li>
-                </ul>
-                <ul class="lnb_2">
-                    <li><a href="#">뼈 | 관절 건강</a></li>
-                    <li><a href="#">남성 | 여성 건강</a></li>
-                    <li><a href="#">눈 | 두뇌 건강</a></li>
-                    <li><a href="#">위 | 간 건강</a></li>
-                    <li><a href="#">면역 | 수면 건강</a></li>
-                </ul>
-                <ul class="lnb_3">
-                    <li>
-                        <a href="#">
-                        <img src="" alt="">
-                        <p>[특별 선물 포장 서비스]</p>
-                        <p>자세히보기</p>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="lnb_4">
-                    <li><a href="#">
-                        <img src="" alt="">
-                        <p>[덴프스몰의 특별한 이벤트]</p>
-                        <p>자세히보기</p>
-                    </a></li>
-                </ul>
-                <ul class="lnb_5">
-                    <li><a href="#">
-                        <img src="" alt="">
-                        <p>[덴프스몰 멤버십혜택]</p>
-                        <p>자세히보기</p>
-                    </a></li>
-                </ul>
-                <ul class="lnb_6">
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">상품문의</a></li>
-                    <li><a href="#">1:1 문의</a></li>
-                </ul>
+                <div class="lnb_container">
+                    <div class="left">
+                        <ul class="lnb1">
+                            <li><a href="#">유산균 | 장 건강</a></li>
+                            <li><a href="#">비타민 | 미네랄</a></li>
+                            <li><a href="#">오메가3 | 혈관 건강</a></li>
+                            <li><a href="#">어린이 | 키즈</a></li>
+                            <li><a href="#">이너뷰티 | 밸런스</a></li>
+                            <li><a href="#">프로틴 | 다이어트</a></li>
+                        </ul>
+                        <ul class="lnb2">
+                            <li><a href="#">뼈 | 관절 건강</a></li>
+                            <li><a href="#">남성 | 여성 건강</a></li>
+                            <li><a href="#">눈 | 두뇌 건강</a></li>
+                            <li><a href="#">위 | 간 건강</a></li>
+                            <li><a href="#">면역 | 수면 건강</a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="img_wrap">
+                            <ul class="lnb3">
+                                <li>
+                                    <a href="#">
+                                    <img src="./images/tem_lnb01.png" alt="">
+                                    <p>[특별 선물 포장 서비스]</p>
+                                    <p>자세히보기</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="lnb4">
+                                <li><a href="#">
+                                    <img src="./images/tem_lnb01.png" alt="">
+                                    <p>[덴프스몰의 특별한 이벤트]</p>
+                                    <p>자세히보기</p>
+                                </a></li>
+                            </ul>
+                            <ul class="lnb5">
+                                <li><a href="#">
+                                    <img src="./images/tem_lnb01.png" alt="">
+                                    <p>[덴프스몰 멤버십혜택]</p>
+                                    <p>자세히보기</p>
+                                </a></li>
+                            </ul>
+                        </div>
+                        <ul class="lnb6">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">상품문의</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
     </header>
     <main>
@@ -120,7 +128,7 @@
                 <div class="swiper-slide slide2">slide2</div>
                 <div class="swiper-slide slide3">slide3</div>
             </div>
-            <!--필요 시 사용(선택) : 페이지번호, 이전다음버튼-->
+            <!--페이지번호, 이전다음버튼-->
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -643,12 +651,12 @@
                     <li class="num3"><img src="./images/video/3.png" alt=""></li>
                     <li class="num4"><img src="./images/video/4.png" alt=""></li>
                 </ul>
-                <ul class="video_show">
+                <!-- <ul class="video_show">
                     <li class="video1"><iframe width="1250" height="703" src="https://www.youtube.com/embed/iH_LnWUWnIU" title="[덴프스 X 공유] 덴마크 프리미엄 스탠다드, 덴프스 (30s)" style="border: none;"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
                     <li class="video2"><iframe width="1250" height="703" src="https://www.youtube.com/embed/rEyKYxeTsUk" title="10th Anniversary Denps" style="border: none;"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
                     <li class="video3"><iframe width="1250" height="703" src="https://www.youtube.com/embed/K2S9OBMSQnA" title="덴프스 X 공유 비타민편 #트루바이타민 ㅣ DENPS X GONGYOO TVCF 15’’ VITAMIN" style="border: none;"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
                     <li class="video4"><iframe width="1250" height="703" src="https://www.youtube.com/embed/xTejCztqTUI" title="덴프스 X 공유 유산균편 #덴마크유산균이야기 ㅣ DENPS X GONGYOO TVCF 15’’ PROBIOTICS" style="border: none;"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
-                </ul>
+                </ul> -->
             </div>
         </section><!-- ----------------------------------7행 : 영상영역 끝-->
         <section id="row8_review"><!-- ----------------------------------8행 : 리뷰영역 시작-->

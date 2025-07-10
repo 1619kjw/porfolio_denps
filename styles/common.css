@@ -24,7 +24,7 @@ html, body {width:100%;}
 header {
     width:100%; height:152px;
     min-width:320px;
-    position:relative;
+    position:relative;/* lnb_bg의 부모위치기준 */
 }
 header .top_wrap {
     display:flex;
@@ -79,44 +79,126 @@ header .top_wrap #user_menu #user_bottom a img {}
 header nav {
     border-top:1px solid #eee;
     border-bottom:1px solid #eee;
+    display:flex; justify-content:space-between;
+    padding:14px 250px;
 }
-header nav .gnb_left {}
+header nav .gnb_left {
+    display:flex; align-items:center;
+    gap:30px; 
+}
 header nav .gnb_left li {}
 header nav .gnb_left li a {}
 header nav .gnb_left li a img {}
-header nav .gnb_right {}
+header nav .gnb_right {
+    display:flex; align-items:center;
+    gap:30px; 
+}
 header nav .gnb_right li {}
-header nav .gnb_right li a {}
-header nav .gnb_right li a img {}
-header .lnb_bg {}
-header .lnb_bg .lnb_1 {}
-header .lnb_bg .lnb_1 li {}
-header .lnb_bg .lnb_1 li a {}
-header .lnb_bg .lnb_2 {}
-header .lnb_bg .lnb_2 li {}
-header .lnb_bg .lnb_2 li a {}
-header .lnb_bg .lnb_3 {}
-header .lnb_bg .lnb_3 li {}
-header .lnb_bg .lnb_3 li a {}
-header .lnb_bg .lnb_3 li a img {}
-header .lnb_bg .lnb_3 li a p:nth-child(1) {}
-header .lnb_bg .lnb_3 li a p:nth-child(2) {}
-header .lnb_bg .lnb_4 {}
-header .lnb_bg .lnb_4 li {}
-header .lnb_bg .lnb_4 li a {}
-header .lnb_bg .lnb_4 li a img {}
-header .lnb_bg .lnb_4 li a p:nth-child(1) {}
-header .lnb_bg .lnb_4 li a p:nth-child(2) {}
-header .lnb_bg .lnb_5 {}
-header .lnb_bg .lnb_5 li {}
-header .lnb_bg .lnb_5 li a {}
-header .lnb_bg .lnb_5 li a img {}
-header .lnb_bg .lnb_5 li a p:nth-child(1) {}
-header .lnb_bg .lnb_5 li a p:nth-child(2) {}
-header .lnb_bg .lnb_6 {}
-header .lnb_bg .lnb_6 li {}
-header .lnb_bg .lnb_6 li a {}
+header nav .gnb_right li a {
+    display:flex; align-items:center;
+}
+header nav .gnb_right li a img {margin-right:8px;}
+/* nav 호버시 나오는 디자인 */
+header .lnb_bg {
+    opacity:0; overflow:hidden;/* 초기숨기기 */
+    pointer-events:none;/* 영역선택X */
+    transition:opacity 0.2s ease;
+    z-index:20;
+    position:absolute;/* header에 위치설정 */
+    top:100%; left:0;
+    width:100%; height:274px;
+    background-color:#fff;
+}
+header nav:hover + .lnb_bg, .lnb_bg:hover {
+    opacity:1;/* nav와 .lnb_bg에 hover시 .lnb_bg보이기 */
+    pointer-events:all;/* 보이는상태일때 영역선택O */
+}
+header .lnb_bg .lnb_container {
+    display:flex; justify-content:space-between;
+    padding:30px 250px;
+}
+header .lnb_bg .lnb_container .left {
+    width:361px; display:flex;
+    position:relative;
+}
+header .lnb_bg .lnb_container .left::after {
+    content:''; display:block;
+    background:#ddd; width:1px; height:150px;
+    position:absolute; left:519px; top:32px;
+}
+header .lnb_bg .lnb_container .left .lnb1 {margin-right:137px;}
+header .lnb_bg .lnb_container .left .lnb1 li {margin-bottom:15px;}
+header .lnb_bg .lnb_container .left .lnb1 li:last-child {margin-bottom:0;}
+header .lnb_bg .lnb_container .left .lnb1 li a {}
+header .lnb_bg .lnb_container .left .lnb2 {}
+header .lnb_bg .lnb_container .left .lnb2 li {margin-bottom:15px;}
+header .lnb_bg .lnb_container .left .lnb2 li:last-child {margin-bottom:0;}
+header .lnb_bg .lnb_container .left .lnb2 li a {}
+header .lnb_bg .lnb_container .right {display:flex;}
+header .lnb_bg .lnb_container .right .img_wrap {
+    display:flex; gap:20px;
+    margin-right:62px;
+}
+header .lnb_bg .lnb_container .right .img_wrap * img {margin-bottom:14px;}
+header .lnb_bg .lnb_container .right .img_wrap * p:nth-of-type(2) {
+    color:#999; font-size:0.875rem; margin-top:5px;}
+header .lnb_bg .lnb_container .right .img_wrap .lnb3 {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb3 li {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb3 li a {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb3 li a img {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb3 li a p:nth-child(1) {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb3 li a p:nth-child(2) {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb4 {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb4 li {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb4 li a {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb4 li a img {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb4 li a p:nth-child(1) {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb4 li a p:nth-child(2) {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb5 {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb5 li {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb5 li a {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb5 li a img {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb5 li a p:nth-child(1) {}
+header .lnb_bg .lnb_container .right .img_wrap .lnb5 li a p:nth-child(2) {}
+header .lnb_bg .lnb_container .right .lnb6 {}
+header .lnb_bg .lnb_container .right .lnb6 li {margin-bottom:15px;}
+header .lnb_bg .lnb_container .right .lnb6 li:last-child {margin-bottom:0;}
+header .lnb_bg .lnb_container .right .lnb6 li a {}
 /* ----------------------------header 끝 */
 
 /* ----------------------------footer 시작 */
+footer {display:block;}
+footer .footer_top {
+    display:flex;
+}
+footer .footer_top .left {}
+footer .footer_top .left a {}
+footer .footer_top .right {}
+footer .footer_top .right p {}
+footer .footer_top .right span {}
+footer .footer_bottom {}
+footer .footer_bottom .company_info {}
+footer .footer_bottom .company_info > p {}
+footer .footer_bottom .company_info .company_info_top {}
+footer .footer_bottom .company_info .company_info_top .row1 {}
+footer .footer_bottom .company_info .company_info_top .row1 span {}
+footer .footer_bottom .company_info .company_info_top .row1 a {}
+footer .footer_bottom .company_info .company_info_top .row2 {}
+footer .footer_bottom .company_info .company_info_top .row2 span {}
+footer .footer_bottom .company_info .company_info_top .row3 {}
+footer .footer_bottom .company_info .company_info_top .row3 span {}
+footer .footer_bottom .company_info .company_info_top .row4 {}
+footer .footer_bottom .company_info .company_info_top .row4 span {}
+footer .footer_bottom .company_info .company_info_bottom {}
+footer .footer_bottom .company_info .company_info_bottom span {}
+footer .footer_bottom .company_info .company_info_bottom a {}
+footer .footer_bottom .company_info .company_info_bottom p {}
+footer .footer_bottom .notice_sns {}
+footer .footer_bottom .notice_sns .notice {}
+footer .footer_bottom .notice_sns .notice a {}
+footer .footer_bottom .notice_sns .sns {}
+footer .footer_bottom .notice_sns .sns a {}
+footer .footer_bottom .notice_sns .sns a img {}
+
+
 /* ----------------------------footer 끝 */
