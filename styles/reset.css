@@ -6,7 +6,7 @@ form, fieldset, legend, input, button, select, option, textarea,
 span, em, strong, br, sup, sub, del, s, q, mark, code,img, a,
 table, thead, tbody, tfoot, tr,td, th {
     margin:0; padding:0; box-sizing:border-box;
-    line-height:1; letter-spacing:-0.02em; word-spacing:0;
+    line-height:1; letter-spacing:0em; word-spacing:0;
     font-size:1em; font-weight:400; color:#000; font-style:normal;
     font-family:'Pretendard', sans-serif;
 }/* font-size는 여기서는 em으로 써주고 실제 css작성할때는 rem으로 작성하기
