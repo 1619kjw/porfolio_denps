@@ -4,8 +4,7 @@ main {
     min-width:320px;
 }
 
-/* 메인배너 스와이퍼 디자인 */
-/* * {margin:0; padding:0; line-height:1.0; box-sizing:border-box;} */
+/* 메인배너 - 스와이퍼 디자인 */ 
 main .main {width:100%; height:714px; position:relative;}
 main .main .swiper-wrapper {}
 main .main .swiper-wrapper .swiper-slide {
@@ -16,20 +15,20 @@ main .main .swiper-wrapper .swiper-slide {
 main .main .swiper-wrapper .slide1 {
     background-image:url(../images/mainBnr_01.png);
 }
-/* main .main .swiper-wrapper .slide2 {background:yellow;} */
+main .main .swiper-wrapper .slide2 {background:yellow;}
 main .main .swiper-wrapper .slide3 {background:green;}
-main .main .swiper-wrapper .slide4 {background:blue;}
-
-/* 스와이퍼 페이지네이션 디자인 */
+/* 메인배너 - 스와이퍼 페이지네이션 디자인 */
 main .main .swiper-pagination {
-    background:blue; width:40px; height:40px;
-    z-index:999;
-    position:absolute;
+    background:#fff;
+    width:68px; height:31px; border-radius:20px;
+    display:flex; justify-content:center; align-items: center; gap:5px;
+    position:absolute; left:auto; right:145px; bottom:60px;
 }
-main .main .swiper-pagination .swiper-pagination-bullets {background:yellow;} /* swiper-pagination-bullets */
-
-/* 스와이퍼 이전, 다음버튼 디자인 */
-.swiper-button-next:after, .swiper-button-prev:after {
+main .main .swiper-pagination * {/* pagination의 모든 글자적용 */
+    font-size:0.875rem; font-weight:500;
+}
+/* 메인배너 - 스와이퍼 이전, 다음버튼 디자인 */
+main .main .swiper-button-next:after, main .main .swiper-button-prev:after {
     display:none; /* 스와이퍼 이전,다음버튼 기본디자인 삭제 */
 }
 main .main .swiper-button-next, main .main .swiper-button-prev {
@@ -48,12 +47,46 @@ main .main .swiper-button-next {
     right:110px;
 }
 
-/* 2행 스와이퍼 */
-.category {width:1420px; height:199px; /* 원하는 스와이퍼 전체 크기 */}
-.category .swiper-wrapper {}
-.category .swiper-wrapper .swiper-slide {/* 개별슬라이드 값 설정 */
-    width:160px; height:199px;
+/* 2행 - 카테고리 스와이퍼 */
+main #row2_category {padding:100px 250px; width:100%; height:583px;}
+main #row2_category .container {
+    height:100%;
+    position:relative;
 }
+main #row2_category .container h2 {
+    font-size:2.125rem; font-weight:600;
+}
+main #row2_category .container .category {/* 스와이퍼 전체크기 */
+    width:100%; height:199px;
+    margin:70px 0 70px;
+}
+main #row2_category .container .category .swiper-wrapper {}
+main #row2_category .container .category .swiper-wrapper .swiper-slide {width:160px;}
+main #row2_category .container .category .swiper-wrapper .swiper-slide a {text-align:center;}
+main #row2_category .container .category .swiper-wrapper .swiper-slide a img {margin-bottom:20px;}
+main #row2_category .container .swiper-button-prev:after,
+main #row2_category .container .swiper-button-next:after {display:none;}
+main #row2_category .container .swiper-button-prev {
+    top:34px; right:34px; left:auto;
+    width:24px; height:24px;
+}
+main #row2_category .container .swiper-button-next {
+    top:34px; right:0;
+    width:24px; height:24px;
+}
+main #row2_category .container .swiper-scrollbar {}
+
+/* 3행 베스트셀러 스와이퍼 */
+main #row3_best {}
+main #row3_best h2 {font-size:2.125rem; font-weight:600;}
+main #row3_best h2 span {
+    font-size:1.375rem; font-weight:500; color:#999;
+}
+
+
+
+
+
 
 /* 5행(선물하기) 스크롤 스와이퍼 */
 .gift {width:720px; height: 550px;/* 원하는 스와이퍼 전체 크기 */}

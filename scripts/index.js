@@ -3,7 +3,7 @@
 const mainSwiper = new Swiper('.main',{
     // autoplay:{delay:2500,},
     pagination:{
-        el:'.main ~ .swiper-pagination',
+        el:'.main > .swiper-pagination',
         type:'fraction',
     },
     navigation:{
@@ -15,16 +15,15 @@ const mainSwiper = new Swiper('.main',{
 /* 2행:카테고리 가로 스크롤 스와이퍼 */
 const categorySwiper = new Swiper('.category',{
     navigation:{
-        nextEl:'.swiper-wrapper ~ .swiper-button-next',
-        prevEl:'.swiper-wrapper ~ .swiper-button-prev',
+        nextEl:'.category ~ .swiper-button-next',
+        prevEl:'.category ~ .swiper-button-prev',
     },
     slidesPerView: 'auto', // 한 화면에 슬라이드 너비만큼 자동으로 개수 표시
     slidesPerGroup: 1,     // 한 번에 1개 이동
     spaceBetween: 40,      // 슬라이드 간 간격
     freeMode:false,        //하나씩 끊어서 이동됨
     scrollbar: {
-        el: ".swiper-scrollbar",
-        draggable: true,
+        el: '.category ~ .swiper-scrollbar',
     },
 })
 /* 3행:베스트셀러 스와이퍼 */
