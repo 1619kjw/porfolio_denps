@@ -11,12 +11,13 @@ html, body {width:100%;}
     align-items:center;
     position:relative;
 }
-#line_banner img:nth-child(1) {/* 쿠폰 이미지 */
+#line_banner .contents {display:flex; align-items:center;}
+#line_banner .contents img {/* 쿠폰 이미지 */
     width:30px; height:20px; margin-right:10px;
 }
-#line_banner p {font-size:0.875rem;}
-#line_banner p em {color:#FF0000;}
-#line_banner button img {/* close버튼 */
+#line_banner .contents p {font-size:0.875rem;}
+#line_banner .contents p em {color:#FF0000;}
+#line_banner > img {/* close버튼 */
     width:24px; height:24px;
     position:absolute; right:251px; top:11px;
 }

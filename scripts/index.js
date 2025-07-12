@@ -1,3 +1,11 @@
+/* 임시링크인 a태그 새로고침 막기 */
+document.querySelectorAll('a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        if (anchor.getAttribute('href') === '#') {
+        e.preventDefault();
+        }
+    });
+});
 
 /* 1행 : 메인배너 스와이퍼 기능 */
 const mainSwiper = new Swiper('.main',{
@@ -20,12 +28,29 @@ const categorySwiper = new Swiper('.category',{
     },
     slidesPerView: 'auto', // 한 화면에 슬라이드 너비만큼 자동으로 개수 표시
     slidesPerGroup: 1,     // 한 번에 1개 이동
-    spaceBetween: 40,      // 슬라이드 간 간격
+    spaceBetween: 38,      // 슬라이드 간 간격
     freeMode:false,        //하나씩 끊어서 이동됨
     scrollbar: {
         el: '.category ~ .swiper-scrollbar',
     },
 })
+
+
+/* 3행 탭 구조 */
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    tabContents.forEach(content => content.classList.remove('active'));
+    button.classList.add('active');
+    tabContents[index].classList.add('active');
+  });
+});
+
+
+
 /* 3행:베스트셀러 스와이퍼 */
 const bestSwiper = new Swiper('.best',{
     navigation:{
@@ -53,7 +78,7 @@ const newSwiper = new Swiper('.new',{
     },
     slidesPerView: 4,      // 한 화면에 4개
     slidesPerGroup: 1,     // 한 번에 1개 이동
-    spaceBetween: 20,      // 슬라이드 간 간격
+    spaceBetween: 73.33,      // 슬라이드 간 간격
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -75,23 +100,33 @@ const giftSwiper = new Swiper('.gift', {
         draggable: true,
     },
 });
+/* 6행(아티클) 탭 메뉴 디자인 변경 */
+const taps = document.querySelectorAll('#row6_article .tap_menu a');
+taps.forEach((obj)=>{
+    obj.addEventListener('click',()=>{
+        /* 모든 탭에 class active 제거 */
+        taps.forEach(tap => tap.classList.remove('active'));
+        /* 클리한 탭에 class active 추가 */
+        obj.classList.add('active');
+    })
+})
 /* 6행 : 아티클 가로 스크롤바 스와이퍼 */
 const articleSwiper = new Swiper('.article',{
     slidesPerView:3,      //한번에 3개 보이기
     spaceBetween: 8,      // 슬라이드 간 간격
     scrollbar: {
-        el : ".article .swiper-scrollbar",
+        el : ".right .swiper-scrollbar",
         draggable: true,
     }
 })
-/* 7행(영상영역) 번호페이지네이션 스와이퍼 */
-const videoSwiper = new Swiper('.video',{
-    navigation: {
-        nextEl: "#row7_video .swiper-button-next",
-        prevEl: "#row7_video .swiper-button-prev",
-    },
-    pagination:{
-        el:'.video + .swiper-pagination',
-        type:'bullets',
-    },
+/* 7행(영상영역) */
+/* 숫자 탭 -> 영상 바뀌기 */
+const videoTap = document.querySelectorAll('.video_tab li');
+const videoList = document.querySelectorAll('.video_show li')
+videoTap.forEach((obj,idx)=>{
+    obj.addEventListener('click',()=>{
+        for(let i of videoList){i.style.display = 'none';}/* 초기화(모든 영상 숨기기) */
+        videoList[idx].style.display = 'block';/* 클릭한 번호의 영상 보이기 */
+    })
 })
+/* 번호 클릭 시 이미지 바뀌기 */
