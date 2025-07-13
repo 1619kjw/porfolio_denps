@@ -82,12 +82,86 @@ main #row2_category .container .swiper-scrollbar {}
 /* -----------------2행 - 카테고리 스와이퍼 끝 */
 
 /* -----------------3행(베스트셀러) 시작 */
-/* 3행(베스트셀러) 스와이퍼 */
-main #row3_best {}
-main #row3_best h2 {font-size:2.125rem; font-weight:600;}
-main #row3_best h2 span {
-    font-size:1.375rem; font-weight:500; color:#999;
+main #row3_best {
+    width:100%; padding:100px 250px;
+    position:relative;
 }
+main #row3_best  h2 {font-size:2.125rem; font-weight:600; margin-bottom:70px; text-align: center; line-height:1.2;}
+main #row3_best  h2 span {font-size:1.375rem; font-weight:500; color:#999;}
+/* 탭 버튼 */
+main #row3_best  .tab-buttons {border:1px solid red; display:flex; justify-content:center; margin-bottom:26px;}
+main #row3_best  .tab-buttons .tab-button {
+    font-size:0.875rem; font-weight:500; color:#555;
+    padding:10px 15px; border:1px solid #ddd; border-radius:20px;
+    margin-right:10px; 
+}
+main #row3_best  .tab-buttons .tab-button:last-child {margin-right:0;}
+main #row3_best  .tab-buttons .tab-button.active {
+    color:#fff; background:#0E2148; border:none;
+}
+/* 탭 내용 */
+main #row3_best  .tab-contents {
+    width:1420px; height:433px;
+}
+main #row3_best  .tab-contents .tab-content {}
+main #row3_best  .tab-contents .tab-content.active {}
+/* 3행(베스트셀러) 스와이퍼 */
+main #row3_best  .tab-contents .tab-content .best {}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper {}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide {
+    position:relative; width:300px;
+}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide a:nth-child(1) {}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide a:nth-child(1) img {}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide a:nth-child(2) {
+    position:absolute; top:254px; right:16px;
+}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide a:nth-child(2) img {}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide a:nth-child(3) {}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide a:nth-child(3) h3 {
+    font-size:1.125rem; font-weight:500; margin:15px 0 14px;
+}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide del {
+    font-size:0.75rem; font-weight:500; color:#666; display:block; margin-bottom:4px;
+}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide em {
+    color:#FF0000; font-weight:600; margin-right:5px;
+}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide span {font-weight:500;}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide .score_like_num * {
+    font-size:0.813rem; color:#666;
+}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide .score_like_num {
+    display:flex; align-items:center; margin-top:30px;
+}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide .score_like_num a {
+    display:flex; align-items:center; margin-right:10px; gap:3px;
+}
+main #row3_best  .tab-contents .tab-content .best .swiper-wrapper .swiper-slide .score_like_num p {
+    display:flex; align-items:center; gap:3px;
+}
+/* 이전, 다음 버튼 */
+main #row3_best  .tab-contents .tab-content .best .swiper-button-prev:after {display:none;}
+main #row3_best  .tab-contents .tab-content .best .swiper-button-next:after {display:none;}
+main #row3_best  .tab-contents .tab-content .best .swiper-button-prev {
+    background-image:url(../images/list_prev.png);
+    width:50px; height:50px;
+    top:125px; left:0; margin-top:0;
+}
+main #row3_best  .tab-contents .tab-content .best .swiper-button-next {
+    background-image:url(../images/list_next.png);
+    width:50px; height:50px;
+    top:125px; right:0; margin-top:0;
+}
+main #row3_best .more {
+    padding:13px 55px; border:1px solid #ccc; border-radius:2px;
+    display:flex; align-items:center;
+    font-size:0.875rem; color:#333;
+    margin:70px auto 0;
+}
+main #row3_best .more img {margin-left:6px;}
+
+
 /* -----------------3행(베스트셀러) 끝 */
 
 /* -----------------4행(신제품) 시작 */
@@ -127,6 +201,7 @@ main #row4_new .container .new .swiper-wrapper .swiper-slide .score_like_num * {
     font-size:0.813rem; color:#666; 
 }
 main #row4_new .container .new {position:relative; }
+/* 이전, 다음 버튼 */
 main #row4_new .container .new .swiper-button-prev:after {display:none;}
 main #row4_new .container .new .swiper-button-next:after {display:none;}
 main #row4_new .container .new .swiper-button-prev {
@@ -142,17 +217,69 @@ main #row4_new .container .new .swiper-button-next {
 /* -----------------4행(신제품) 끝 */
 
 
-
-/* 5행(선물하기) 스크롤 스와이퍼 */
-.gift {width:720px; height: 550px;/* 원하는 스와이퍼 전체 크기 */}
-.gift .swiper-wrapper {}
-.gift .swiper-wrapper .swiper-slide {/* 개별슬라이드 값 설정 */
-    width:616px; height:170px;
-    padding-right: 20px;
-    border: 1px solid red;
-    margin-bottom: 34.5px;
+/* 5행(선물하기) */
+main #row5_gift {padding:100px 250px; text-align:center;}
+main #row5_gift h2 {line-height:1.2;}
+main #row5_gift h2 span {}
+main #row5_gift .tap_menu {
+    margin:40px 0 26px;
+    display:flex; gap:15px;
+    justify-content:center;
 }
-#row5_gift .bottom {display:flex;}
+main #row5_gift .tap_menu .tap {
+    /* 비활성화 시 공통 탭디자인 */
+    padding:10px 15px; border:1px solid #ddd; border-radius:20px;
+    color:#555; font-size:0.875rem; font-weight:500;
+}
+main #row5_gift .tap_menu .tap.active {
+    /* 활성화 탭 디자인 */
+    background-color:#0E2148; color:#fff; border:none;
+}
+main #row5_gift .bottom {
+    display:flex; justify-content:space-between; gap:23px;
+    width:1420px; height:550px;
+}
+main #row5_gift .bottom img {}
+/* 5행(선물하기) 스크롤 스와이퍼 */
+main #row5_gift .bottom .gift {
+    width:720px; height:550px;/* 원하는 스와이퍼 전체 크기 */
+    display:flex; justify-content:space-between;
+    background:gray;
+}
+main #row5_gift .bottom .gift {text-align:left;}
+main #row5_gift .bottom .gift .swiper-wrapper {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide {/* 개별슬라이드 값 설정 */
+    width:616px; height:170px;
+    border: 1px solid blue;
+}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide a:nth-child(1) {margin-right:30px;}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide a:nth-child(1) img {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide a:nth-child(2) {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide a:nth-child(2) img {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents > a {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents > a h3 {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents del {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents em {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents span {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents .score_like_num {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents .score_like_num a {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents .score_like_num a img {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents .score_like_num a span {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents .score_like_num p {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents .score_like_num p img {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents .score_like_num p span {}
+main #row5_gift .bottom .gift .swiper-scrollbar {right:0;}
+main #row5_gift .more {
+    display:flex; justify-content:center; align-items:center; margin:40px auto 0;
+    padding:13px 55px; border:1px solid #ccc; border-radius:2px;
+    color:#333; font-size:0.875rem; margin-right:6px;
+    position:relative; right:600.5px;
+}
+main #row5_gift .more img {}
+
+
+
 
 /* -----------------6행(아티클) 시작*/
 main #row6_article {

@@ -217,7 +217,7 @@
         </section><!-- ------------------------------2행 : 카테고리별 슬라이드 끝 -->
         <section id="row3_best"><!-- ----------------------------------3행 : 베스트셀러 시작 -->
             <h2><span>꾸준히 사랑받고 있는</span><br>덴프스의 베스트셀러</h2>
-            <div class="tab-buttons">
+            <div class="tab-buttons"><!-- 탭 버튼 -->
                 <button class="tab-button active">유산균 | 장 건강</button>
                 <button class="tab-button">비타민 | 미네랄</button>
                 <button class="tab-button">오메가3 | 혈관 건강</button>
@@ -230,8 +230,8 @@
                 <button class="tab-button">위 | 간 건강</button>
                 <button class="tab-button">면역 | 수면 건강</button>
             </div>
-            <div class="tab-contents">
-                <div class="tab-content active">
+            <div class="tab-contents"><!-- 탭 내용 -->
+                <div class="tab-content active" id="tap_con1"><!-- 각 스와이퍼 크게 묶고 나열 -->
                     <!-- 스와이퍼 구조 시작 -->
                     <div class="swiper best">
                         <div class="swiper-wrapper">
@@ -367,10 +367,17 @@
                         <div class="swiper-button-next"></div>
                     </div>
                 </div>
-                <div class="tab-content">탭 2 내용</div>
-                <div class="tab-content">탭 3 내용</div>
+                <div class="tab-content" id="tap_con2">탭 2 내용</div>
+                <div class="tab-content" id="tap_con3">탭 3 내용</div>
+                <div class="tab-content" id="tap_con4">탭 4 내용</div>
+                <div class="tab-content" id="tap_con5">탭 5 내용</div>
+                <div class="tab-content" id="tap_con6">탭 6 내용</div>
+                <div class="tab-content" id="tap_con7">탭 7 내용</div>
+                <div class="tab-content" id="tap_con8">탭 8 내용</div>
+                <div class="tab-content" id="tap_con9">탭 9 내용</div>
+                <div class="tab-content" id="tap_con10">탭 10 내용</div>
+                <div class="tab-content" id="tap_con11">탭 11 내용</div>
             </div>
-
             <button type="button" class="more">베스트셀러 더보기<img src="./images/gift/arrow_right.png" alt=""></button>
         </section><!-- ----------------------------------3행 : 베스트셀러 끝 -->
         <section id="row4_new"><!-- ----------------------------------4행 : 신제품 시작 -->
@@ -498,13 +505,12 @@
             <h2><span>오직, 덴프스몰에서만 만날 수 있는</span><br>덴프스 단독 선물 구성</h2>
             <div class="tap_menu">
                 <a href="#" class="tap">전체</a>
-                <a href="#" class="tap">선물하기 추천, 덴프스 베스트셀러 상품</a>
+                <a href="#" class="tap active">선물하기 추천, 덴프스 베스트셀러 상품</a>
                 <a href="#" class="tap">지금 함께하면 더 좋은 추천 상품</a>
                 <a href="#" class="tap">더 나은 일상을 위한 정기배송 서비스</a>
                 <a href="#" class="tap">장 건강을 위하여</a>
                 <a href="#" class="tap">한 팩에 담은 비타민</a>
             </div>
-            <button type="button" class="more">제품 보러가기<img src="./images/gift/arrow_right.png" alt=""></button>
             <div class="bottom"><!-- 옆으로 정렬하기 위한 묶음 -->
                 <img src="./images/gift/main.png" alt="선물하기 소개 이미지">
                 <div class="swiper gift"><!-- 선물하기 제품 스크롤 스와이퍼 시작 -->
@@ -576,6 +582,7 @@
                     <div class="swiper-scrollbar"></div>
                 </div><!-- 선물하기 제품 스크롤 스와이퍼 끝 -->
             </div>
+            <button type="button" class="more">제품 보러가기<img src="./images/gift/arrow_right.png" alt=""></button>
         </section><!-- ----------------------------------5행 : 선물하기 끝 -->
         <section id="row6_article"><!-- ----------------------------------6행 : 아티클 시작-->
             <div class="left">

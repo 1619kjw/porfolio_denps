@@ -39,7 +39,6 @@ const categorySwiper = new Swiper('.category',{
 /* 3행 탭 구조 */
 const tabButtons = document.querySelectorAll('.tab-button');
 const tabContents = document.querySelectorAll('.tab-content');
-
 tabButtons.forEach((button, index) => {
   button.addEventListener('click', () => {
     tabButtons.forEach(btn => btn.classList.remove('active'));
@@ -48,6 +47,7 @@ tabButtons.forEach((button, index) => {
     tabContents[index].classList.add('active');
   });
 });
+/* 탭 선택 시 내용 바뀌기 */
 
 
 
@@ -59,7 +59,7 @@ const bestSwiper = new Swiper('.best',{
     },
     slidesPerView: 4,      // 한 화면에 4개
     slidesPerGroup: 1,     // 한 번에 1개 이동
-    spaceBetween: 20,      // 슬라이드 간 간격
+    spaceBetween: 73.33,   // 슬라이드 간 간격
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -70,6 +70,8 @@ const bestSwiper = new Swiper('.best',{
         1024: { slidesPerView: 4 }
     }
 })
+
+
 /* 4행: 신제품 스와이퍼 */
 const newSwiper = new Swiper('.new',{
     navigation:{
@@ -89,10 +91,13 @@ const newSwiper = new Swiper('.new',{
         1024: { slidesPerView: 4 }
     }
 })
+
+
 /* 5행 : 선물하기 상품 스크롤바 스와이퍼*/
 const giftSwiper = new Swiper('.gift', {
     direction: "vertical",     // 세로 스크롤
     slidesPerView: "auto",     // 콘텐츠 길이만큼 자동
+    spaceBetween: 20,          // 슬라이드 간 간격
     freeMode: true,            // 자유롭게 스크롤
     mousewheel: true,          // 마우스 휠로 스크롤 가능
     scrollbar: {
@@ -100,6 +105,9 @@ const giftSwiper = new Swiper('.gift', {
         draggable: true,
     },
 });
+
+
+
 /* 6행(아티클) 탭 메뉴 디자인 변경 */
 const taps = document.querySelectorAll('#row6_article .tap_menu a');
 taps.forEach((obj)=>{
