@@ -251,12 +251,16 @@ main #row5_gift .bottom .gift .swiper-wrapper {}
 main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide {/* 개별슬라이드 값 설정 */
     width:616px; height:170px;
     border: 1px solid blue;
+    position:relative;
 }
 main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide a:nth-child(1) {margin-right:30px;}
 main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide a:nth-child(1) img {}
 main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide a:nth-child(2) {}
 main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide a:nth-child(2) img {}
-main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents {}
+main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents {
+    position:absolute; left:200px; top:0;
+    padding:10px 0;
+}
 main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents > a {}
 main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents > a h3 {}
 main #row5_gift .bottom .gift .swiper-wrapper .swiper-slide .contents del {}
