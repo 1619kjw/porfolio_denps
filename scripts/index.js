@@ -40,12 +40,12 @@ const categorySwiper = new Swiper('.category',{
 const tabButtons = document.querySelectorAll('.tab-button');
 const tabContents = document.querySelectorAll('.tab-content');
 tabButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    tabButtons.forEach(btn => btn.classList.remove('active'));
-    tabContents.forEach(content => content.classList.remove('active'));
-    button.classList.add('active');
-    tabContents[index].classList.add('active');
-  });
+    button.addEventListener('click', () => {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        button.classList.add('active');
+        tabContents[index].classList.add('active');
+    });
 });
 /* 탭 선택 시 내용 바뀌기 */
 
@@ -138,3 +138,24 @@ videoTap.forEach((obj,idx)=>{
     })
 })
 /* 번호 클릭 시 이미지 바뀌기 */
+
+
+/* 8행(리뷰영역) */
+/* 탭 -> 탭내용 나오기 */
+const tapBtn = document.querySelectorAll('.tap_wrap li');
+const tapContent = document.querySelectorAll('.tab_contents li');
+tapBtn.forEach((obj,idx)=>{
+    obj.addEventListener('click',()=>{
+        for(let i of tapContent){i.style.display='none';}/* 초기화(모든 탭내용 숨기기) */
+        tapContent[idx].style.display='block';/* 클릭한 탭의 내용 보이기 */
+    })
+})
+/* 활성화탭 디자인 변경 */
+tapBtn.forEach((obj)=>{
+    obj.addEventListener('click',()=>{
+        /* 모든 탭에 class active제거 */
+        tapBtn.forEach(tap => tap.classList.remove('active'));
+        /* 클릭한 탭에 class active 추가 */
+        obj.classList.add('active');
+    })
+})

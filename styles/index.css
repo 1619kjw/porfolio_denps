@@ -365,9 +365,97 @@ main #row7_video .video .video_show .video4 {display:none;}
 main #row7_video .video .video_show li iframe {width:100%; height:100%;}
 /* -----------------7행(영상영역) 끝*/
 
+/* -----------------8행(리뷰영역) 시작 */
+main #row8_review {padding:100px 0;}
+main #row8_review .title {margin-bottom:70px;}
+main #row8_review .title h2 {text-align:center; line-height:1.2;}
+main #row8_review .title h2 span {display:block;}
+main #row8_review .contents {
+    display:flex; justify-content:space-between; align-items:end;
+    width:1420px; margin:0 auto;
+}
+main #row8_review .contents .product {}
+main #row8_review .contents .product h3 {
+    margin-bottom:11px; font-size:1.125rem; text-align:right;
+}
+main #row8_review .contents .product .image_wrap {
+    /* 백그라운드이미지 */
+    background-image:url(../images/review/review_product01.png);
+    width:600px; height:600px;
+}
+main #row8_review .contents .product .image_wrap .swiper.reviewPhoto {/* 스와이퍼시작 */}
+main #row8_review .contents .product .image_wrap .swiper.reviewPhoto .swiper-wrapper {}
+main #row8_review .contents .product .image_wrap .swiper.reviewPhoto .swiper-wrapper .swiper-slide {}
+main #row8_review .contents .product .image_wrap .swiper.reviewPhoto .swiper-scrollbar {}
+main #row8_review .contents .review {
+    border:1px solid purple; width:720px;
+}
+main #row8_review .contents .review .tap_wrap {
+    display:flex; margin-bottom:20px;
+}
+main #row8_review .contents .review .tap_wrap .tapBtn { 
+    color:#444; padding:10px 0; width:95px; text-align:center;
+    border-bottom:3px solid #ddd;
+}
+main #row8_review .contents .review .tap_wrap .tapBtn.active {
+    color:#000; border-bottom:3px solid #000;
+}
+main #row8_review .contents .review .tab_contents {}
+main #row8_review .contents .review .tab_contents .tab_content {
+    height:600px; display:flex; flex-flow:row nowrap;
+}
+main #row8_review .contents .review .tab_contents .tab_content .reviewlist {
+    display:flex;
+    padding:18px;
+    border:1px solid red;
+}
+main #row8_review .contents .review .tab_contents .tab_content .reviewlist > img {
+    margin-right:55px;
+}
+main #row8_review .contents .review .tab_contents .tab_content .reviewlist .reviewContent {
+    padding-top:10px;
+}
+main #row8_review .contents .review .tab_contents .tab_content .reviewlist .reviewContent .top {
+    display:flex; justify-content:space-between; border:1px solid blue;
+}
+main #row8_review .contents .review .tab_contents .tab_content .reviewlist .reviewContent .top .product_name {
+    margin-bottom:10px;
+    width:341px;/* 글자영역의 너비 고정 */
+    overflow:hidden; /* 넘치는 내용 숨기기 */
+    white-space:nowrap;/* 줄바꿈없이 한줄로 표시 */
+    text-overflow:ellipsis;/* 넘치는 경우 말줄임표 처리 */
+    border:1px solid blue;
+}
+main #row8_review .contents .review .tab_contents .tab_content .reviewlist .reviewContent .top .score {
+    /* display:flex; gap:0; */ /* width:100%; */
+    display:flex; height:16px;
+    border:1px solid blue;
+}
+main #row8_review .contents .review .tab_contents .tab_content .reviewlist .reviewContent .top .score img {
+    /* width:16px; height:16px; */ width:16px; height:16px;
+}
+main #row8_review .contents .review .tab_contents .tab_content .reviewlist .reviewContent .bottom {}
+main #row8_review .contents .review .tab_contents .tab_content .reviewlist .reviewContent .bottom .reviewtext {
+    width:425px; height:85px; line-height:1.5;
+    overflow:hidden; text-overflow:ellipsis;
+    border:1px solid yellow;
+    font-size:0.875rem;
+    display:-webkit-box; 
+    -webkit-line-clamp: 4; /* 몇 줄까지 보일지 설정(나머진 말줄임처리) */ 
+    -webkit-box-orient: vertical;
+}
+main #row8_review .contents .review .tab_contents .tab_content .list1::after {
+    /* 가상선택자 구분선 */
+    content:''; display:block;
+    width:720px; height:10px; background-color:#ccc;
+}
+/* main #row8_review .contents .review .tab_contents .tab_content .reviewlist.list2::after {
+    content:''; display:inline-block;
+    width:720px; height:1px; background-color:#ccc;
+} */
+/* -----------------8행(리뷰영역) 끝 */
 
-
-/* -----------------8행(브랜딩영역) 시작 */
+/* -----------------9행(브랜딩영역) 시작 */
 main #row9_brand_meaning {padding:100px 0; display:flex; justify-content:center;}
 main #row9_brand_meaning .left {}
 main #row9_brand_meaning .right {}
@@ -398,7 +486,7 @@ main #row9_brand_meaning .right li:nth-child(3) .text_wrap p em {color:#F9B3DF;}
 main #row9_brand_meaning .right li .text_wrap span {
     font-size:1.125rem; color:#444; line-height:1.5;
 }
-/* -----------------8행(브랜딩영역) 끝 */
+/* -----------------9행(브랜딩영역) 끝 */
 
 
 /* 반응형규칙 */
