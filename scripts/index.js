@@ -36,20 +36,23 @@ const categorySwiper = new Swiper('.category',{
 })
 
 
-/* 3행 탭 구조 */
-const tabButtons = document.querySelectorAll('.tab-button');
-const tabContents = document.querySelectorAll('.tab-content');
-tabButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
-        button.classList.add('active');
-        tabContents[index].classList.add('active');
-    });
-});
-/* 탭 선택 시 내용 바뀌기 */
-
-
+/* 3행 베스트셀러 탭 구조 */
+const bestTap = document.querySelectorAll('#row3_best .tab-buttons .tab-button');
+const bestTapContents = document.querySelectorAll('#row3_best .tab-contents .tab-content');
+/* 탭 선택 시 해당 탭 내용 보이기 */
+bestTap.forEach((obj, idx)=>{
+    obj.addEventListener('click',()=>{
+        for(let i of bestTapContents){i.style.display='none'};
+        bestTapContents[idx].style.display='block';
+    })
+})
+/* 탭 선택 시 활성화 디자인 생기기 */
+bestTap.forEach((obj)=>{
+    obj.addEventListener('click',()=>{
+        bestTap.forEach(tap => tap.classList.remove('active'));
+        obj.classList.add('active');
+    })
+})
 
 /* 3행:베스트셀러 스와이퍼 */
 const bestSwiper = new Swiper('.best',{
@@ -92,11 +95,21 @@ const newSwiper = new Swiper('.new',{
     }
 })
 
-
+/* 5행 탭구조 */
+/* 탭 클릭 시 활성화디자인 변경 */
+const giftTap = document.querySelectorAll('#row5_gift .tap_menu .tap');
+giftTap.forEach((obj)=>{
+    obj.addEventListener('click',()=>{
+        giftTap.forEach(tap=>tap.classList.remove('active'));
+        obj.classList.add('active');
+    });
+});
+/* 탭 클릭 시 해당 탭내용 나오기 */
+const giftTapContents = document.querySelectorAll('#row5_gift .gift');
 /* 5행 : 선물하기 상품 스크롤바 스와이퍼*/
 const giftSwiper = new Swiper('.gift', {
     direction: "vertical",     // 세로 스크롤
-    slidesPerView: "auto",     // 콘텐츠 길이만큼 자동
+    slidesPerView: 3,          // 3개씩 보이기
     spaceBetween: 20,          // 슬라이드 간 간격
     freeMode: true,            // 자유롭게 스크롤
     mousewheel: true,          // 마우스 휠로 스크롤 가능
@@ -137,7 +150,18 @@ videoTap.forEach((obj,idx)=>{
         videoList[idx].style.display = 'block';/* 클릭한 번호의 영상 보이기 */
     })
 })
-/* 번호 클릭 시 이미지 바뀌기 */
+/* 숫자 탭 클릭 시 활성화디자인변경 */
+videoTap.forEach((obj,idx)=>{
+    obj.addEventListener('click',()=>{
+        /* 모든 탭 src를 비활성화상태로 만들기(초기화) */
+        videoTap.forEach((obj,idx)=>{
+            obj.children[0].children[0].src = `./images/video/${idx+1}.png`;/* 비활성화상태의 이미지연결 */
+        })
+        /* 클릭한 탭의 src를 활성화디자인으로 바꾸기 */
+        obj.children[0].children[0].src = `./images/video/${idx+1}_active.png`;/* 활성화상태의 이미지연결 */
+    })
+})
+
 
 
 /* 8행(리뷰영역) */
