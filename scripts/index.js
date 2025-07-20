@@ -53,6 +53,10 @@ bestTap.forEach((obj)=>{
         obj.classList.add('active');
     })
 })
+/* 페이지 로딩 시 첫번째 탭내용보이기 */
+bestTapContents.forEach((el, idx) => {
+  el.style.display = idx === 0 ? 'block' : 'none';
+});
 
 /* 3행:베스트셀러 스와이퍼 */
 const bestSwiper = new Swiper('.best',{
@@ -167,11 +171,11 @@ videoTap.forEach((obj,idx)=>{
 /* 8행(리뷰영역) */
 /* 탭 -> 탭내용 나오기 */
 const tapBtn = document.querySelectorAll('.tap_wrap li');
-const tapContent = document.querySelectorAll('.tab_contents li');
+const reviewTapContent = document.querySelectorAll('.tab_contents li');
 tapBtn.forEach((obj,idx)=>{
     obj.addEventListener('click',()=>{
-        for(let i of tapContent){i.style.display='none';}/* 초기화(모든 탭내용 숨기기) */
-        tapContent[idx].style.display='block';/* 클릭한 탭의 내용 보이기 */
+        for(let i of reviewTapContent){i.style.display='none';}/* 초기화(모든 탭내용 숨기기) */
+        reviewTapContent[idx].style.display='block';/* 클릭한 탭의 내용 보이기 */
     })
 })
 /* 활성화탭 디자인 변경 */
@@ -183,3 +187,8 @@ tapBtn.forEach((obj)=>{
         obj.classList.add('active');
     })
 })
+/* 페이지 로딩 시 첫번째 탭내용보이기 */
+reviewTapContent.forEach((el, idx) => {
+  el.style.display = idx === 0 ? 'block' : 'none';
+});
+
