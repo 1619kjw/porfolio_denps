@@ -105,10 +105,14 @@ main #row3_best .tab-buttons .tab-button.active {
 }
 /* 탭 내용 */
 main #row3_best .tab-contents {
-    width:1420px; height:433px;
+    width:1420px; height:433px; 
 }
-main #row3_best .tab-contents .tab-content {}
-main #row3_best .tab-contents .tab-content.active {}
+main #row3_best .tab-contents .tab-content {
+    display:none;/* 탭 내용 숨기기(초기화) */
+}
+main #row3_best .tab-contents .tab-content.active {
+    display:block;/* 활성화 탭내용만 보이기 */
+}
 /* 3행(베스트셀러) 스와이퍼 */
 main #row3_best .tab-contents .tab-content .best {}
 main #row3_best .tab-contents .tab-content .best .swiper-wrapper {}
