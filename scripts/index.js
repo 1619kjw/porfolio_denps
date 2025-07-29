@@ -7,6 +7,19 @@ document.querySelectorAll('a').forEach(anchor => {
     });
 });
 
+/* 띠배너 close버튼 */
+const lineBnr = document.querySelector('#line_banner');
+const closeBtn = document.querySelector('#line_banner > img');
+closeBtn.addEventListener('click',()=>{
+    lineBnr.style.display = 'none';
+})
+
+/* 하트누르면 활성화 이미지 변경 */
+// const likeBtn = document.querySelectorAll('<img src="./images/click_like.png" alt="좋아요등록하기">');
+/* 장바구니누르면 활성화 이미지 변경 */
+// const cartBtn = document.querySelectorAll('');
+
+
 /* 1행 : 메인배너 스와이퍼 기능 */
 const mainSwiper = new Swiper('.main',{
     // autoplay:{delay:2500,},
@@ -174,7 +187,7 @@ const newSwiper = new Swiper('.new',{
     }
 })
 
-/* 5행 탭구조 */
+/* 5행(선물하기) 탭구조 */
 /* 탭 클릭 시 활성화디자인 변경 */
 const giftTap = document.querySelectorAll('#row5_gift .tap_menu .tap');
 giftTap.forEach((obj)=>{
@@ -184,7 +197,17 @@ giftTap.forEach((obj)=>{
     });
 });
 /* 탭 클릭 시 해당 탭내용 나오기 */
-const giftTapContents = document.querySelectorAll('#row5_gift .gift');
+const giftTapContents = document.querySelectorAll('#row5_gift .bottom .tap_contents .tapcontent');
+giftTap.forEach((obj,idx)=>{
+    obj.addEventListener('click',()=>{
+        for(let i of giftTapContents){i.style.display = 'none'};/* 탭내용모두숨기기 */
+        giftTapContents[idx].style.display = 'block'; /* 클릭한탭의 내용만 보이기 */
+    })
+})
+/* 페이지 로딩 시 첫번째 탭내용보이기 */
+giftTapContents.forEach((el, idx) => {
+    el.style.display = idx === 0 ? 'block' : 'none';
+});
 /* 5행 : 선물하기 상품 스크롤바 스와이퍼*/
 const giftSwiper = new Swiper('.gift', {
     direction: "vertical",     // 세로 스크롤
@@ -264,6 +287,6 @@ tapBtn.forEach((obj)=>{
 })
 /* 페이지 로딩 시 첫번째 탭내용보이기 */
 reviewTapContent.forEach((el, idx) => {
-  el.style.display = idx === 0 ? 'block' : 'none';
+    el.style.display = idx === 0 ? 'block' : 'none';
 });
 
