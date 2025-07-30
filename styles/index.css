@@ -23,7 +23,7 @@ main .main .swiper-wrapper .slide2 {
     background-image:url(../images/mainBnr_02.png);
 }
 main .main .swiper-wrapper .slide3 {
-    /* background-image:url(); */
+    background-image:url(../images/mainBnr_03.png);
 }
 /* 메인배너 - 스와이퍼 페이지네이션 디자인 */
 main .main .swiper-pagination {
@@ -459,6 +459,23 @@ main #row8_review .contents .review .tab_contents .tab_content .reviewlist.list1
     padding-bottom:40.5px;
     position:relative;/* 더보기 이미지의 부모위치기준 */
 }
+/* 리뷰 더보기 버튼 부모위치기준 개별로 각각 주기 */
+/* 여성탭 2번째 리뷰(위) */
+/* 20대탭 2, 3번째 리뷰 */
+main #row8_review .contents .review .tab_contents .tab_content:nth-child(4) .reviewlist.list2 {
+    position:relative;}
+main #row8_review .contents .review .tab_contents .tab_content:nth-child(4) .reviewlist.list3 {
+    position:relative;}
+/* 30대탭 2번째 리뷰 */
+main #row8_review .contents .review .tab_contents .tab_content:nth-child(5) .reviewlist.list2 {
+    position:relative;}
+/* 40대탭 2, 3번째 리뷰 */
+main #row8_review .contents .review .tab_contents .tab_content:nth-child(6) .reviewlist.list2 {
+    position:relative;}
+main #row8_review .contents .review .tab_contents .tab_content:nth-child(6) .reviewlist.list3 {
+    position:relative;}
+
+
 main #row8_review .contents .review .tab_contents .tab_content .reviewlist.list2 {
     border-bottom:1px solid #ccc;
     padding-top:40.5px;
