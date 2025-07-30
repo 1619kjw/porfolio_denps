@@ -19,8 +19,12 @@ main .main .swiper-wrapper .swiper-slide {
 main .main .swiper-wrapper .slide1 {
     background-image:url(../images/mainBnr_01.png);
 }
-main .main .swiper-wrapper .slide2 {background:yellow;}
-main .main .swiper-wrapper .slide3 {background:green;}
+main .main .swiper-wrapper .slide2 {
+    background-image:url(../images/mainBnr_02.jpg);
+}
+main .main .swiper-wrapper .slide3 {
+    background-image:url(../images/덴프스배너2.png);
+}
 /* 메인배너 - 스와이퍼 페이지네이션 디자인 */
 main .main .swiper-pagination {
     background:#fff;
