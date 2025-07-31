@@ -335,19 +335,28 @@ reviewList.forEach((obj,idx)=>{
     })
 })
 /* 리뷰 더보기 버튼 누를 시 리뷰팝업실행 */
-const reviewMoreBtn = document.querySelectorAll('img[alt=리뷰더보기]');//리뷰 더보기 버튼
-const reviewImg = document.querySelectorAll('img[alt=사용자등록후기사진]');//리뷰이미지
-const reviewText = document.querySelectorAll('.reviewtext');//리뷰내용
-const reviewPopup = document.querySelector('.popup_bg')//리뷰 팝업
-const popupImg = document.querySelector('.popup img');//리뷰팝업 이미지
-const popupText = document.querySelector('.popup p');//리뷰팝업 내용
-reviewMoreBtn.forEach((obj,idx)=>{
+const reviewMoreBtn = document.querySelectorAll('#row8_review .bottom img');
+const reviewPopup = document.querySelector('.popup_bg')
+const popupImg = document.querySelector('.popup img');
+const popupText = document.querySelector('.popup .wrap2 p');
+const popupName = document.querySelector('.popup .wrap1 p');//리뷰팝업 상품명
+const popupScore = document.querySelector('.popup_score');//리뷰팝업 별점
+
+reviewMoreBtn.forEach(obj=>{
     obj.addEventListener('click',()=>{
-        reviewPopup.style.display = 'none';//리뷰팝업 초기화
-        reviewPopup[idx].style.display = 'block';//해당인덱스의 리뷰팝업보이기
+        reviewPopup.style.display = 'block';
+        const review = obj.closest('.reviewlist');//버튼이 속한 리뷰찾기
+        popupImg.src = review.querySelector('.reviewlist > img').src;//해당리뷰의 이미지를 팝업이미지에 대입
+        popupText.textContent = review.querySelector('.reviewtext').textContent;//해당리뷰의 리뷰내용을 팝업리뷰내용에 대입
+        //상품명이랑 별점도 출력
+        popupName.textContent = review.querySelector('.product_name').textContent;
+        popupScore.innerHTML = review.querySelector('.score').innerHTML;
     })
 })
+//팝업클릭시 팝업사라지기
+reviewPopup.addEventListener('click',()=>{
+    reviewPopup.style.display = 'none';})
 
-// console.log(popupText);
+
 
 
