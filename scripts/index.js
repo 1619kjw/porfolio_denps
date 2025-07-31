@@ -14,8 +14,26 @@ closeBtn.addEventListener('click',()=>{
     lineBnr.style.display = 'none';
 })
 
-/* 하트누르면 활성화 이미지 변경 */
-// const likeBtn = document.querySelectorAll('<img src="./images/click_like.png" alt="좋아요등록하기">');
+/* 빈하트누르면 꽉찬하트로 이미지 변경 + 다시 누르면 빈하트로 변경 */
+const likeClk = document.querySelectorAll('img[alt="좋아요등록하기"]');//빈 하트 이미지
+// console.log(likeClk);
+// console.log(likeClk[0].alt,likeClk[0].src); alt와 src속성 읽기
+likeClk.forEach(obj=>{
+    obj.addEventListener('click',()=>{
+        if(obj.src.includes('click_like_active.png')){
+            /* 좋아요해제(꽉찬하트일때->빈하트로변경) */
+            obj.src = './images/click_like.png';
+            obj.alt = '좋아요해제'
+            alert('상품이 위시리스트에서 해제되었습니다');
+        }else{
+            /* 좋아요등록(빈하트일때->꽉찬하트로변경) */
+            obj.src = './images/click_like_active.png';
+            obj.alt = '좋아요등록'
+            alert('상품을 위시리스트에 등록하였습니다');
+        }
+    })
+})
+
 /* 장바구니누르면 활성화 이미지 변경 */
 // const cartBtn = document.querySelectorAll('');
 
@@ -187,39 +205,49 @@ const newSwiper = new Swiper('.new',{
     }
 })
 
-/* 5행(선물하기) 탭구조 */
-/* 탭 클릭 시 활성화디자인 변경 */
+
+
+/* -----------5행(선물하기) */
 const giftTap = document.querySelectorAll('#row5_gift .tap_menu .tap');
-giftTap.forEach((obj)=>{
-    obj.addEventListener('click',()=>{
+const giftTapContents = document.querySelectorAll('#row5_gift .bottom .tap_contents .tapcontent');//각 스와이퍼를 묶은 부모
+// 탭 클릭 이벤트
+giftTap.forEach((obj, idx) => {
+    obj.addEventListener('click', () => {
+        console.log('click active')
+        activateTab5(idx);
+        /* 탭버튼 활성화디자인 변경 */
         giftTap.forEach(tap=>tap.classList.remove('active'));
         obj.classList.add('active');
     });
 });
-/* 탭 클릭 시 해당 탭내용 나오기 */
-const giftTapContents = document.querySelectorAll('#row5_gift .bottom .tap_contents .tapcontent');
-giftTap.forEach((obj,idx)=>{
-    obj.addEventListener('click',()=>{
-        for(let i of giftTapContents){i.style.display = 'none'};/* 탭내용모두숨기기 */
-        giftTapContents[idx].style.display = 'block'; /* 클릭한탭의 내용만 보이기 */
-    })
-})
-/* 페이지 로딩 시 첫번째 탭내용보이기 */
-giftTapContents.forEach((el, idx) => {
-    el.style.display = idx === 0 ? 'block' : 'none';
-});
-/* 5행 : 선물하기 상품 스크롤바 스와이퍼*/
-const giftSwiper = new Swiper('.gift', {
-    direction: "vertical",     // 세로 스크롤
-    slidesPerView: 3,          // 3개씩 보이기
-    spaceBetween: 20,          // 슬라이드 간 간격
-    freeMode: true,            // 자유롭게 스크롤
-    mousewheel: true,          // 마우스 휠로 스크롤 가능
-    scrollbar: {
-        el: ".gift .swiper-scrollbar",/* 부모 표시 */
-        draggable: true,
-    },
-});
+//스크롤바 스와이퍼
+const swiperInstances5 = [];/* 스와이퍼4개 모두잡는배열 */
+function activateTab5(idx) {
+    for(let i of giftTapContents){i.style.display = 'none'};//모든탭내용숨기기
+    // 해당 탭의 swiper 요소 찾기
+    giftTapContents[idx].style.display = 'block'
+    const swiperContainer5 = giftTapContents[idx].querySelector('.swiper');//자식으로 들어있는 스와이퍼
+
+    // 아직 초기화되지 않았다면 Swiper 생성
+    if (swiperContainer5 && !swiperInstances5[idx]) {
+        //클릭한 탭의 탭내용 생성
+        swiperInstances5[idx] = new Swiper(swiperContainer5, {
+            direction: "vertical",     // 세로 스크롤
+            slidesPerView: 3,          // 3개씩 보이기
+            spaceBetween: 20,          // 슬라이드 간 간격
+            freeMode: true,            // 자유롭게 스크롤
+            mousewheel: true,          // 마우스 휠로 스크롤 가능
+            scrollbar: {
+                el: swiperContainer5.querySelector('.swiper-scrollbar'),
+                draggable: true,
+            },
+        });
+    } else if (swiperInstances5[idx]) {
+        swiperInstances5[idx].update();
+    }
+}
+//페이지 로딩 시 첫번째 탭내용보이기
+activateTab5(0);
 
 
 
@@ -289,4 +317,37 @@ tapBtn.forEach((obj)=>{
 reviewTapContent.forEach((el, idx) => {
     el.style.display = idx === 0 ? 'block' : 'none';
 });
+/* 개별리뷰에 마우스 올렸을때 왼쪽에 상품명, 상품이미지 표시 */
+const productName = document.querySelector('#row8_review .contents .product h3');/* 상품명 */
+const productImg = document.querySelector('#row8_review .image_wrap img');/* 상품이미지 */
+const reviewList = document.querySelectorAll('.reviewlist');/* 리뷰 */
+// console.log(productName,productImg,reviewList[0]);
+/* 변경될 데이터 만들기 */
+const reviewData = ['프로액티브 쏘팔메토', '[산뜻한 일상] 프로액티브 쏘팔메토 2박스/2개월분', '덴마크 유산균이야기 우먼', '철분 헤모케어', '[선물 세트] 덴마크 유산균이야기 3박스 + 덴마크 유산균이야기 우먼 3박스', '마그네슘 솔루션', '비타민D 츄어블 1000IU', '덴마크 유산균이야기 키즈', '루테인지아잔틴 MAX', '비오틴 밸런스', '마그네슘 솔루션', '덴마크 유산균이야기 다이어트', '트루바이타민 I', '[선물하기 단독] 루테인지아잔틴 MAX 2박스 + 덴프스 씨드키퍼 1p', '덴마크 유산균이야기 50캡슐', '엠에스엠 관절케어', '밀크씨슬 리버케어']
+const reviewDataImg = ['./images/review/product_img01.png', './images/review/product_img02.png', './images/review/product_img03.png', './images/review/product_img04.png', './images/review/product_img05.png', './images/review/product_img06.png', './images/review/product_img07.png', './images/review/product_img08.png', './images/review/product_img09.png', './images/review/product_img10.png', './images/review/product_img11.png', './images/review/product_img12.png', './images/review/product_img13.png', './images/review/product_img14.png', './images/review/product_img15.png', './images/review/product_img16.png', './images/review/product_img17.png']
+/* 리뷰에 마우스 올렸을때 해당 인덱스의 상품명, 이미지 출력 */
+reviewList.forEach((obj,idx)=>{
+    obj.addEventListener('mouseover',()=>{
+        /* 상품명 변경 */
+        productName.textContent = reviewData[idx];
+        /* 상품이미지 변경 */
+        productImg.src = reviewDataImg[idx];
+    })
+})
+/* 리뷰 더보기 버튼 누를 시 리뷰팝업실행 */
+const reviewMoreBtn = document.querySelectorAll('img[alt=리뷰더보기]');//리뷰 더보기 버튼
+const reviewImg = document.querySelectorAll('img[alt=사용자등록후기사진]');//리뷰이미지
+const reviewText = document.querySelectorAll('.reviewtext');//리뷰내용
+const reviewPopup = document.querySelector('.popup_bg')//리뷰 팝업
+const popupImg = document.querySelector('.popup img');//리뷰팝업 이미지
+const popupText = document.querySelector('.popup p');//리뷰팝업 내용
+reviewMoreBtn.forEach((obj,idx)=>{
+    obj.addEventListener('click',()=>{
+        reviewPopup.style.display = 'none';//리뷰팝업 초기화
+        reviewPopup[idx].style.display = 'block';//해당인덱스의 리뷰팝업보이기
+    })
+})
+
+// console.log(popupText);
+
 

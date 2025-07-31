@@ -426,9 +426,10 @@ main #row8_review .contents .product h3 {
 }
 main #row8_review .contents .product .image_wrap {
     /* 백그라운드이미지 */
-    background-image:url(../images/review/review_product01.png);
+    /* background-image:url(../images/review/review_product01.png); */
     width:600px; height:600px;
 }
+main #row8_review .contents .product .image_wrap img {width:100%;}
 main #row8_review .contents .product .image_wrap .swiper.reviewPhoto {/* 스와이퍼시작 */}
 main #row8_review .contents .product .image_wrap .swiper.reviewPhoto .swiper-wrapper {}
 main #row8_review .contents .product .image_wrap .swiper.reviewPhoto .swiper-wrapper .swiper-slide {}
@@ -555,6 +556,26 @@ main #row9_brand_meaning .right li .text_wrap span {
     font-size:1.125rem; color:#444; line-height:1.5;
 }
 /* -----------------9행(브랜딩영역) 끝 */
+
+
+
+/* 리뷰 팝업 */
+.popup_bg {
+    position:fixed; top:0; left:0;/* position fixed나 absolute */
+    z-index:800;/* header보다 뒤에 오도록 */
+    background-color:rgba(0,0,0,0.4);
+    width:100%; height:100vh;
+    display:none;/* 초기숨기기(부모에만 해주면됨) */
+}
+.popup_bg .popup {
+    width:800px; margin:120px auto 0;/* 너비를 줘서 자식인 img크기가 자동으로 따라오도록+가운데배치 */
+    height:80%; overflow:auto;/* 어느정도 안에서 보고싶은지 크기설정+그 범위보다 넘치면 자동으로 스크롤생성하도록 auto설정 */
+    display:flex;
+}
+.popup_bg .popup img {width:134px; height:134px;}
+.popup_bg .popup p {}
+
+
 
 
 /* 반응형규칙 */
