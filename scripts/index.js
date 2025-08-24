@@ -67,76 +67,11 @@ const categorySwiper = new Swiper('.category',{
 })
 
 
-/* 3행 베스트셀러 탭 구조 */
-// const bestTap = document.querySelectorAll('#row3_best .tab-buttons .tab-button');
-// const bestTapContents = document.querySelectorAll('#row3_best .tab-contents .tab-content');
 
-// Swiper 인스턴스를 저장할 배열
-// const swiperInstances = [];
-
-// 각 탭 안의 swiper를 개별 초기화
-// document.querySelectorAll('#row3_best .tab-content .best').forEach((el, idx) => {
-//     swiperInstances[idx] = new Swiper(el, {
-//         slidesPerView: 4,
-//         slidesPerGroup: 1,
-//         spaceBetween: 73.33,
-//         navigation: {
-//             nextEl: el.querySelector('.swiper-button-next'),
-//             prevEl: el.querySelector('.swiper-button-prev'),
-//         },
-//         breakpoints: {
-//             320: { slidesPerView: 1 },
-//             640: { slidesPerView: 2 },
-//             1024: { slidesPerView: 4 }
-//         }
-//     });
-// });
-
-/* 탭 선택 시 해당 탭 내용 보이기 */
-// bestTap.forEach((obj, idx)=>{
-//     obj.addEventListener('click',()=>{
-//         /* 탭 콘텐츠 전환 */
-//         bestTapContents.forEach(con => con.classList.remove('active'));
-//         bestTapContents[idx].classList.add('active');
-//         /* for(let i of bestTapContents){i.style.display='none'};
-//         bestTapContents[idx].style.display='block'; */
-//         /* 탭 버튼 활성화 처리 */
-//         bestTap.forEach(tap => tap.classList.remove('active'));
-//         obj.classList.add('active');
-//         // Swiper 다시 계산
-//         swiperInstances[idx]?.update();
-//     })
-// })
-/* 페이지 로딩 시 첫번째 탭내용보이기 */
-/* bestTapContents.forEach((el, idx) => {
-    el.style.display = idx === 0 ? 'block' : 'none';
-}); */
-
-/* 3행:베스트셀러 스와이퍼 */
-// const bestSwiper = new Swiper('.best',{
-//     navigation:{
-//         nextEl:'.swiper-wrapper ~ .swiper-button-next',
-//         prevEl:'.swiper-wrapper ~ .swiper-button-prev',
-//     },
-//     slidesPerView: 4,      // 한 화면에 4개
-//     slidesPerGroup: 1,     // 한 번에 1개 이동
-//     spaceBetween: 73.33,   // 슬라이드 간 간격
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-//     breakpoints: {         // 반응형 설정 (선택사항)
-//         320: { slidesPerView: 1 },
-//         640: { slidesPerView: 2 },
-//         1024: { slidesPerView: 4 }
-//     }
-// })
-
-
-/* gpt한테 받은 코드 */
+/* 3행 베스트셀러 탭 구조, 스와이퍼 구조 */
 const bestTap = document.querySelectorAll('#row3_best .tab-buttons .tab-button');
 const bestTapContents = document.querySelectorAll('#row3_best .tab-contents .tab-content');
-const swiperInstances = [];
+const swiperInstances = [];// Swiper 인스턴스를 저장할 배열
 
 function activateTab(idx) {
     // 모든 탭 비활성화
@@ -174,7 +109,6 @@ function activateTab(idx) {
 
 // 첫 탭 초기화
 activateTab(0);
-
 // 탭 클릭 이벤트
 bestTap.forEach((btn, idx) => {
     btn.addEventListener('click', () => {
@@ -198,7 +132,7 @@ const newSwiper = new Swiper('.new',{
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    breakpoints: {         // 반응형 설정 (선택사항)
+    breakpoints: {// 반응형 설정
         320: { slidesPerView: 1 },
         640: { slidesPerView: 2 },
         1024: { slidesPerView: 4 }
@@ -263,8 +197,8 @@ taps.forEach((obj)=>{
 })
 /* 6행 : 아티클 가로 스크롤바 스와이퍼 */
 const articleSwiper = new Swiper('.article',{
-    slidesPerView:3,      //한번에 3개 보이기
-    spaceBetween: 8,      // 슬라이드 간 간격
+    slidesPerView:3,      
+    spaceBetween: 8,     
     scrollbar: {
         el : ".right .swiper-scrollbar",
         draggable: true,
