@@ -46,16 +46,16 @@ const mainSwiper = new Swiper('.main',{
         type:'fraction',
     },
     navigation:{
-        nextEl:'.swiper-wrapper ~ .swiper-button-next',
-        prevEl:'.swiper-wrapper ~ .swiper-button-prev',
+        nextEl:'.swiper-wrapper ~ .custom-next',
+        prevEl:'.swiper-wrapper ~ .custom-prev',
     },
 });
 
 /* 2행:카테고리 가로 스크롤 스와이퍼 */
 const categorySwiper = new Swiper('.category',{
     navigation:{
-        nextEl:'.category ~ .swiper-button-next',
-        prevEl:'.category ~ .swiper-button-prev',
+        nextEl:'.category ~ .custom-next',
+        prevEl:'.category ~ .custom-prev',
     },
     slidesPerView: 'auto', // 한 화면에 슬라이드 너비만큼 자동으로 개수 표시
     slidesPerGroup: 1,     // 한 번에 1개 이동
@@ -93,8 +93,8 @@ function activateTab(idx) {
             slidesPerGroup: 1,
             spaceBetween: 73.33,
             navigation: {
-                nextEl: swiperContainer.querySelector('.swiper-button-next'),
-                prevEl: swiperContainer.querySelector('.swiper-button-prev'),
+                nextEl: swiperContainer.querySelector('.custom-next'),
+                prevEl: swiperContainer.querySelector('.custom-prev'),
             },
             breakpoints: {
                 320: { slidesPerView: 1 },
@@ -122,15 +122,15 @@ bestTap.forEach((btn, idx) => {
 /* 4행: 신제품 스와이퍼 */
 const newSwiper = new Swiper('.new',{
     navigation:{
-        nextEl:'.swiper-wrapper ~ .swiper-button-next',
-        prevEl:'.swiper-wrapper ~ .swiper-button-prev',
+        nextEl:'.swiper-wrapper ~ .custom-next',
+        prevEl:'.swiper-wrapper ~ .custom-prev',
     },
     slidesPerView: 4,      // 한 화면에 4개
     slidesPerGroup: 1,     // 한 번에 1개 이동
     spaceBetween: 73.33,      // 슬라이드 간 간격
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".custom-next",
+        prevEl: ".custom-prev",
     },
     breakpoints: {// 반응형 설정
         320: { slidesPerView: 1 },

@@ -36,21 +36,21 @@ main .main .swiper-pagination * {/* pagination의 모든 글자적용 */
     font-size:0.875rem; font-weight:500;
 }
 /* 메인배너 - 스와이퍼 이전, 다음버튼 디자인 */
-main .main .swiper-button-next:after, main .main .swiper-button-prev:after {
+main .main .swiper-button-next::after, main .main .swiper-button-prev::after {
     display:none; /* 스와이퍼 이전,다음버튼 기본디자인 삭제 */
 }
-main .main .swiper-button-next, main .main .swiper-button-prev {
+main .main .custom-next, main .main .custom-prev {
     width:70px; height:70px;
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center;
-    position:absolute; 
+    position:absolute; cursor:pointer; top:50%; z-index:600;
 }
-main .main .swiper-button-prev {
+main .main .custom-prev {
     background-image:url(../images/mainBnr_prev.png);
     left:110px;
 }
-main .main .swiper-button-next {
+main .main .custom-next {
     background-image:url(../images/mainBnr_next.png);
     right:110px;
 }
@@ -72,15 +72,17 @@ main #row2_category .container .category .swiper-wrapper {}
 main #row2_category .container .category .swiper-wrapper .swiper-slide {width:160px;}
 main #row2_category .container .category .swiper-wrapper .swiper-slide a {text-align:center;}
 main #row2_category .container .category .swiper-wrapper .swiper-slide a img {margin-bottom:20px;}
-main #row2_category .container .swiper-button-prev:after,
-main #row2_category .container .swiper-button-next:after {display:none;}
-main #row2_category .container .swiper-button-prev {
+main #row2_category .container .swiper-button-prev::after,
+main #row2_category .container .swiper-button-next::after {display:none;}
+main #row2_category .container .custom-prev {
     top:34px; right:34px; left:auto;
     width:24px; height:24px;
+    position:absolute; cursor:pointer;
 }
-main #row2_category .container .swiper-button-next {
+main #row2_category .container .custom-next {
     top:34px; right:0;
     width:24px; height:24px;
+    position:absolute; cursor:pointer;
 }
 main #row2_category .container .swiper-scrollbar {}
 /* -----------------2행 - 카테고리 스와이퍼 끝 */
@@ -153,17 +155,19 @@ main #row3_best .tab-contents .tab-content .best .swiper-wrapper .swiper-slide .
     display:flex; align-items:center; gap:3px;
 }
 /* 이전, 다음 버튼 */
-main #row3_best .tab-contents .tab-content .best .swiper-button-prev:after {display:none;}
-main #row3_best .tab-contents .tab-content .best .swiper-button-next:after {display:none;}
-main #row3_best .tab-contents .tab-content .best .swiper-button-prev {
+main #row3_best .tab-contents .tab-content .best .swiper-button-prev::after {display:none;}
+main #row3_best .tab-contents .tab-content .best .swiper-button-next::after {display:none;}
+main #row3_best .tab-contents .tab-content .best .custom-prev {
     background-image:url(../images/list_prev.png);
     width:50px; height:50px;
     top:125px; left:0; margin-top:0;
+    position:absolute; cursor:pointer; z-index:700;
 }
-main #row3_best .tab-contents .tab-content .best .swiper-button-next {
+main #row3_best .tab-contents .tab-content .best .custom-next {
     background-image:url(../images/list_next.png);
     width:50px; height:50px;
     top:125px; right:0; margin-top:0;
+    position:absolute; cursor:pointer; z-index:700;
 }
 main #row3_best .more {
     padding:13px 55px; border:1px solid #ccc; border-radius:2px;
@@ -214,17 +218,19 @@ main #row4_new .container .new .swiper-wrapper .swiper-slide .score_like_num * {
 }
 main #row4_new .container .new {position:relative; }
 /* 이전, 다음 버튼 */
-main #row4_new .container .new .swiper-button-prev:after {display:none;}
-main #row4_new .container .new .swiper-button-next:after {display:none;}
-main #row4_new .container .new .swiper-button-prev {
+main #row4_new .container .new .swiper-button-prev::after {display:none;}
+main #row4_new .container .new .swiper-button-next::after {display:none;}
+main #row4_new .container .new .custom-prev {
     background-image:url(../images/list_prev.png);
     width:50px; height:50px;
     top:125px; left:0; margin-top:0;
+    position:absolute; cursor:pointer; z-index:700;
 }
-main #row4_new .container .new .swiper-button-next {
+main #row4_new .container .new .custom-next {
     background-image:url(../images/list_next.png);
     width:50px; height:50px;
     top:125px; right:0; margin-top:0;
+    position:absolute; cursor:pointer; z-index:700;
 }
 /* -----------------4행(신제품) 끝 */
 
